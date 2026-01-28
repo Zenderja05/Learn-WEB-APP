@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+<!-- JavaScript -->
+    <h1>JavaScript</h1>
+<!-- JavaScript​ คืออะไร -->
+	<h2>JavaScript คืออะไร</h2>
+	<p>คือ ภาษาคอมพิวเตอร์สำหรับพัฒนาเว็บไซต์ ใช้ควบคุมการทำงานและความโต้ตอบ (Interactive) บนหน้าเว็บ ทำให้เว็บไซต์ไม่เป็นเพียงหน้าแสดงข้อมูลแบบนิ่ง</p>
+<!-- การคอมเมนท์ -->
+    <h2>การคอมเมนท์</h2>
+    <p>ใช้สำหรับเขียนคำอธิบายโค้ด เพื่อให้ผู้อ่านเข้าใจโค้ดได้ง่ายขึ้น โดยจะไม่ถูกประมวลผล</p>
+    <ul>
+        <li>คอมเมนท์แบบบรรทัดเดียว ใช้เครื่องหมาย //</li>
+        <li>คอมเมนท์แบบหลายบรรทัด ใช้เครื่องหมาย /* */</li>
+        <li>หรือคีย์ลัด Ctrl+/ สำหรับคอมเมนท์/เลิกคอมเมนท์</li>
+    </ul>
+<!-- การดูรันโค้ด JavaScript -->
+    <h2>การดูรันโค้ด JavaScript</h2>
+    <p>สามารถดูผลลัพธ์ของโค้ด JavaScript ได้โดยใช้ Developer Tools ในเว็บเบราว์เซอร์</p>
+    <ul>
+        <li>กด F12 หรือคลิกขวาแล้วเลือก "ตรวจสอบ" (Inspect)</li>
+        <li>ไปที่แท็บ "Console"</li>
+        <li>พิมพ์โค้ด JavaScript ลงในคอนโซลแล้วกด Enter เพื่อรันโค้ด</li>
+    </ul>
+<!-- วิธีการเพิ่ม JavaScript ใน HTML -->
+    <h2>วิธีการเพิ่ม JavaScript ใน HTML</h2>
+    <p>สามารถเพิ่มโค้ด JavaScript ลงในไฟล์ HTML ได้ 3 วิธี ดังนี้</p>
+    <ul>
+        <li>แบบฝัง (Inline): ใช้ attribute "onclick", "onload" เป็นต้น ภายในแท็ก HTML</li>
+        <li>แบบภายใน (Internal): ใช้แท็ก &lt;script&gt; ภายในไฟล์ HTML</li>
+        <li>แบบภายนอก (External): ใช้แท็ก script src="ไฟล์.js"&lt;/script&gt; เพื่อเชื่อมโยงไปยังไฟล์ .js ภายนอก</li>
+    </ul>
+<!-- ตัวแปรเก็บข้อมูล -->
+    <h2>ตัวแปรเก็บข้อมูล</h2>
+    <p>ใช้สำหรับเก็บข้อมูลที่ต้องการใช้งานในโปรแกรม JavaScript โดยสามารถประกาศตัวแปรได้ด้วยคำสั่งดังนี้</p>
+    <ul>
+        <li>var: ประกาศตัวแปรแบบทั่วไป</li>
+        <li>let: ประกาศตัวแปรที่มีขอบเขตภายในบล็อก (block scope)</li>
+        <li>const: ประกาศค่าคงที่ที่ไม่สามารถเปลี่ยนแปลงค่าได้</li>
+    </ul>
+<!-- การทำ input/output -->
+    <h2>การทำ input/output</h2>
+    <p>JavaScript มีวิธีการรับข้อมูลจากผู้ใช้และแสดงผลลัพธ์ดังนี้</p>
+    
+    <ul>
+        <p>Input(รับข้อมูล)</p>
+        <li>prompt(): ใช้สำหรับรับข้อมูลจากผู้ใช้ผ่านกล่องโต้ตอบ<pre>let name = prompt("Enter your name:");</pre></li>
+        <p>Output(แสดงผลลัพธ์)</p>
+        <li>alert(): ใช้สำหรับแสดงกล่องข้อความ</li>
+        <li>console.log(): ใช้สำหรับแสดงผลในคอนโซล</li>
+    </ul>
+<!-- ประเภทข้อมูล (Data Types) -->
+    <h2>ประเภทข้อมูล (Data Types)</h2>
+    <p>JavaScript มีประเภทข้อมูลหลักๆ ดังนี้</p>
+    <ul>
+        <li>Number: ตัวเลขทั้งจำนวนเต็มและทศนิยม</li>
+        <p>let Num = 10;</p>
+        <li>String: ข้อความที่อยู่ในเครื่องหมายคำพูดเดี่ยว (' ') หรือคำพูดคู่ (" ")</li>
+        <p>let Str = "Hello JavaScript";</p>
+        <li>Boolean: ค่าความจริง มีค่าได้เพียง true หรือ false</li>
+        <p>let Bool = true;</p>
+        <li>Array: กลุ่มของข้อมูลที่จัดเก็บในรูปแบบลำดับ</li>
+        <p>let Arr = [1, 2, 3, 4, 5];</p>
+        <li>Object: โครงสร้างข้อมูลที่เก็บค่าคู่ของคีย์และค่า</li>
+        <p>let Obj = {name: "John", age: 30};</p>
+        <li>null: ค่าที่แสดงถึงการไม่มีค่า</li>
+        <li>undefined: ค่าที่แสดงถึงตัวแปรที่ยังไม่ได้กำหนดค่า</li>
+    </ul>
+<!-- ข้อมูลประเภท String -->
+    <h2>ข้อมูลประเภท String</h2>
+    <p>String คือ ข้อความที่อยู่ในเครื่องหมายคำพูดเดี่ยว (' ') หรือคำพูดคู่ (" ")</p>
+    <ul>
+        <li>การเชื่อมต่อข้อความ (Concatenation): ใช้เครื่องหมาย + เพื่อเชื่อมข้อความหลายๆ ส่วนเข้าด้วยกัน</li>
+        <p>let greeting = "Hello, " + "world!";</p>
+        <li>การหาความยาวของข้อความ: ใช้ property length เพื่อหาจำนวนตัวอักษรในข้อความ</li>
+        <p>let length = greeting.length;</p>
+        <li>การเข้าถึงตัวอักษร: ใช้ดัชนี (index) เพื่อเข้าถึงตัวอักษรในข้อความ โดยเริ่มต้นที่ 0</li>
+        <p>let firstChar = greeting[0];</p>
+    </ul>
+<!-- ข้อมูลประเภท Number -->
+    <h2>ข้อมูลประเภท Number</h2>
+    <p>Number คือ ตัวเลขทั้งจำนวนเต็มและทศนิยม</p>
+    <ul>
+        <li>การบวก (+), การลบ (-), การคูณ (*), การหาร (/), การหารแบบเศษส่วน (%), การยกกำลัง (**)</li>
+        <p>let sum = 5 + 3;</p>
+        <li>การเพิ่มค่าตัวแปร (Increment): ใช้เครื่องหมาย ++ เพื่อเพิ่มค่าตัวแปรทีละ 1</li>
+        <p>let count = 0; count++;</p>
+        <li>การลดค่าตัวแปร (Decrement): ใช้เครื่องหมาย -- เพื่อ ลดค่าตัวแปรทีละ 1</li>
+        <p>let count = 5; count--;</p>
+        <li>NaN (Not a Number): ค่าที่เกิดขึ้นเมื่อการคำนวณไม่สามารถทำได้ เช่น 0/0</li>
+        <li>Infinity: ค่าที่เกิดขึ้นเมื่อการคำนวณมีค่ามากเกินไป เช่น 1/0</li>
+    </ul>
+<!-- ข้อมูลประเภท Boolean -->
+    <h2>ข้อมูลประเภท Boolean</h2>
+    <p>Boolean คือ ค่าความจริง มีค่าได้เพียง true หรือ false</p>
+    <ul>
+        <li>ใช้ในการเปรียบเทียบค่าต่างๆ เช่น เท่ากับ (==), ไม่เท่ากับ (!=), มากกว่า (>), น้อยกว่า (&lt;), มากกว่าหรือเท่ากับ (>=), น้อยกว่าหรือเท่ากับ (&lt;=)</li>
+        <p>let isAdult = age >= 18;</p>
+        <li>ใช้ในการเชื่อมโยงเงื่อนไข เช่น และ (&&), หรือ (||), ไม่ (!)</li>
+        <p>let canVote = isCitizen && isAdult;</p>
+    </ul>
+<!-- ประเภทข้อมูล array -->
+    <h2>ประเภทข้อมูล array</h2>
+    <p>Array คือ กลุ่มของข้อมูลที่จัดเก็บในรูปแบบลำดับ</p>
+    <ul>
+        <li>การประกาศ Array: ใช้เครื่องหมาย [ ] เพื่อประกาศ Array</li>
+        <p>let fruits = ["Apple", "Banana", "Cherry"];</p>
+        <li>การเข้าถึงข้อมูล: ใช้ดัชนี (index) เพื่อเข้าถึงข้อมูลใน Array โดยเริ่มต้นที่ 0</li>
+        <p>let firstFruit = fruits[0];</p>
+        <li>การเพิ่มข้อมูล: ใช้เมธอด push() เพื่อเพิ่มข้อมูลลงใน Array</li>
+        <p>fruits.push("Orange");</p>
+        <li>การลบข้อมูล: ใช้เมธอด pop() เพื่อลบข้อมูลตัวสุดท้ายออกจาก Array</li>
+        <p>fruits.pop();</p>
+        <li>ความยาวของ Array: ใช้ property length เพื่อหาจำนวนข้อมูลใน Array</li>
+        <p>let length = fruits.length;</p>
+        <li>ข้อมูลมากกว่าสองมิติ: สามารถใช้ Array ซ้อนกันเพื่อจัดเก็บข้อมูลในรูปแบบสองมิติหรือมากกว่า</li>
+        <p>let matrix = [[1, 2], [3, 4]];</p>
+    </ul>
+<!-- ประเภทข้อมูล object -->
+    <h2>ประเภทข้อมูล object</h2>
+    <p>Object คือ โครงสร้างข้อมูลที่เก็บค่าคู่ของคีย์และค่า</p>
+    <ul>
+        <li>การประกาศ Object: ใช้เครื่องหมาย { } เพื่อประกาศ Object</li>
+        <p>let person = {name: "Alice", age: 25, city: "Bangkok"};</p>
+        <li>การเข้าถึงค่า: ใช้จุด (.) หรือตัวหนอน ([]) เพื่อเข้าถึงค่าของคีย์ใน Object</li>
+        <p>let name = person.name; // หรือ let name = person["name"];</p>
+        <li>การเพิ่มหรือแก้ไขค่า: สามารถเพิ่มหรือแก้ไขค่าของคีย์ใน Object ได้โดยตรง</li>
+        <p>person.age = 26; person.country = "Thailand";</p>
+        <li>การลบค่า: ใช้คำสั่ง delete เพื่อลบคีย์และค่าจาก Object</li>
+        <p>delete person.city;</p>
+        <li>การวนลูปผ่าน Object: ใช้คำสั่ง for...in เพื่อวนลูปผ่านคีย์ใน Object</li>
+        <pre>
+            for (let key in person) {
+                console.log(key + ": " + person[key]);
+            }
+        </pre>
+        <li>Array of Object: สามารถเก็บข้อมูลในรูปแบบ Object ซ้อนกันได้</li>
+        <p>let users = [{name: "Alice", age: 25}, {name: "Bob", age: 30}];</p>
+        <li>การเข้าถึงข้อมูลใน Array of Object: ใช้ดัชนี (index) และชื่อ property เพื่อเข้าถึงข้อมูลใน Array of Object</li>
+        <pre>
+            let users = [{name: "Alice", age: 25}, {name: "Bob", age: 30}];
+
+            let firstUser = users[0]; // เข้าถึง Object แรกใน Array
+            console.log(firstUser.name); // Output: Alice
+        </pre>
+        <li>การเก็บข้อมูลในรูปแบบ Object ซ้อนกันได้</li>
+        <pre>
+            let company = {
+                name: "Tech Corp",
+                address: {
+                    street: "123 Main St",
+                    city: "Bangkok",
+                    country: "Thailand"
+                },
+                employees: [
+                    {name: "Alice", position: "Developer"},
+                    {name: "Bob", position: "Designer"}
+                ]
+            };
+
+            console.log(company.address.city); // Output: Bangkok
+        </pre>
+    </ul>
+<!-- Call property -->
+    <p>Call property: ตัวอย่างการเรียกค่าใน Object</p>
+    <pre>
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "Red"
+        };
+
+        console.log(car.brand); // Output: Toyota
+        console.log(car["model"]); // Output: Corolla
+    </pre>
+<!-- Call method -->
+    <p>Call method: ตัวอย่างการเรียกใช้เมธอดใน Object</p>
+    <pre>
+        let calculator = {
+            add: function(a, b) {
+                return a + b;
+            },
+            subtract: function(a, b) {
+                return a - b;
+            }
+        };
+
+        console.log(calculator.add(5, 3)); // Output: 8
+        console.log(calculator.subtract(10, 4)); // Output: 6
+    </pre>
+<!-- Dynamic Types -->
+    <h2>Dynamic Types</h2>
+    <p>JavaScript เป็นภาษาที่มี Dynamic Types หมายความว่าตัวแปรสามารถเก็บค่าประเภทต่างๆ ได้ตามที่กำหนดในขณะรันไทม์</p>
+    <ul>
+        <li>ตัวแปรสามารถเปลี่ยนประเภทข้อมูลได้ตามค่าที่ถูกกำหนดใหม่</li>
+        <p>let data = 10; // data เป็น Number
+        data = "Hello"; // data เปลี่ยนเป็น String</p>
+        <li>การตรวจสอบประเภทข้อมูล: ใช้คำสั่ง typeof เพื่อตรวจสอบประเภทข้อมูลของตัวแปร</li>
+        <p>let type = typeof data;</p>
+    </ul>
+<!-- การแปลงประเภทข้อมูล -->
+    <h2>การแปลงประเภทข้อมูล</h2>
+    <p>JavaScript มีฟังก์ชันสำหรับแปลงประเภทข้อมูลต่างๆ ดังนี้</p>
+    <ul>
+        <li>Explicit: การแปลงประเภทข้อมูลแบบชัดเจน คือการแปลงประเภทข้อมูลด้วยฟังก์ชันที่กำหนดเอง</li>
+        <pre>
+            let num = Number("123"); // แปลง String เป็น Number
+            let str = String(456);   // แปลง Number เป็น String
+            let bool = Boolean(1);   // แปลง Number เป็น Boolean (true)
+            let parseIntValue = parseInt("789"); // แปลง String เป็น จำนวนเต็ม
+            let parseFloatValue = parseFloat("3.14"); // แปลง String เป็น ทศนิยม
+        </pre>
+        <li>Implicit: การแปลงประเภทข้อมูลแบบอัตโนมัติ คือการแปลงประเภทข้อมูลที่เกิดขึ้นโดยอัตโนมัติเมื่อมีการดำเนินการกับค่าต่างประเภท เช่น การบวก String กับ Number</li>
+        <pre>
+            let result = "The answer is " + 42; // Number ถูกแปลงเป็น String อัตโนมัติ
+        </pre>
+        <li>Shot-Circuit Evaluation: การประเมินค่าแบบสั้น ซึ่งใช้ในเงื่อนไขที่มีการเชื่อมโยงด้วย && หรือ || โดยจะหยุดการประเมินเมื่อได้ผลลัพธ์ที่แน่นอนแล้ว</li>
+        <pre>
+            let a = true && false; // ประเมินค่าเป็น false ทันที
+            let b = false || true; // ประเมินค่าเป็น true ทันที
+        </pre>
+        <li>ปัญหาการเทียบค่า: บางครั้งการเทียบค่าระหว่างประเภทข้อมูลที่แตกต่างกันอาจทำให้เกิดผลลัพธ์ที่ไม่คาดคิด เช่น การเทียบ String กับ Number</li>
+        <pre>
+            let isEqual = "5" == 5; // true เพราะ String ถูกแปลงเป็น Number อัตโนมัติ
+            let isStrictEqual = "5" === 5; // false เพราะประเภทข้อมูลไม่ตรงกัน
+        </pre>
+    </ul>
+    
+    <script src="CODE.js"></script>
+</body>
+</html>

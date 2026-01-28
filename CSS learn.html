@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+    <link rel="stylesheet" href="New style.css">
+<body>
+<!-- CSS คืออะไร -->
+    <h1>CSS คืออะไร</h1>
+    <p>CSS ย่อมาจาก Cascading Style Sheets เป็นภาษาที่ใช้สำหรับการตกแต่งและจัดรูปแบบของเอกสาร HTML หรือ XML โดย CSS ช่วยให้เราสามารถควบคุมลักษณะการแสดงผลขององค์ประกอบต่าง ๆ บนหน้าเว็บ เช่น สี, ขนาดตัวอักษร, การจัดวางตำแหน่ง, และอื่น ๆ อีกมากมาย</p>
+    วิธีการใช้งาน CSS
+<!-- โครวสร้าง css -->
+    <h2>โครวสร้าง CSS</h2>
+    <p>CSS ประกอบด้วยกฎ (rules) ที่ประกอบด้วยตัวเลือก (selector) และการประกาศ (declaration) ซึ่งการประกาศจะประกอบด้วยคุณสมบัติ (property) และค่า (value)</p>
+    <pre><code>
+    selector {
+        property: value;
+    }
+    </code></pre>
+    <h2>วิธีการใช้งาน CSS</h2>
+    <p>มีสามวิธีหลักในการใช้ CSS กับเอกสาร HTML:</p>
+    <ol>
+        <li><strong>Inline CSS:</strong> การใส่สไตล์โดยตรงในแท็ก HTML โดยใช้แอตทริบิวต์ style</li>
+        <pre><code>&lt;h1 style="color: blue; font-size: 24px;"&gt;Hello World&lt;/h1&gt;</code></pre>
+
+        <li><strong>Internal CSS:</strong> การใส่สไตล์ภายในแท็ก &lt;style&gt; ในส่วนหัวของเอกสาร HTML</li>
+        <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+        <li><strong>External CSS:</strong> การเชื่อมโยงไฟล์ CSS ภายนอกกับเอกสาร HTML โดยใช้แท็ก &lt;link&gt;</li>
+        <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+    </ol>
+<!-- ตัวอย่างการใช้ CSS -->
+    <h2>ตัวอย่างการใช้ CSS</h2>
+    <ul>
+        <li><h3 id="Inline">Inline</h3></li>
+        <pre>
+            &lt;li style="color: red; font-size: 24px;"&gt;<strong>Inline</strong>&lt;/li&gt;
+        </pre>
+        <li><h3 id="Internal">Internal</h3></li>
+        <pre>
+        &lt;style&gt;
+            li {
+                color: blue;
+                font-size: 24px;
+            }
+        &lt;/style&gt;
+        </pre>
+        <li ><h3 id="External">External</h3></li>
+        <pre>
+        &lt;head&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+        </pre>
+    </ul>
+<!-- แนวทางการใช้ selecter -->
+    <h2>แนวทางการใช้ Selector</h2>
+    <p>Selector เป็นส่วนที่ใช้ในการเลือกองค์ประกอบ HTML ที่เราต้องการจะตกแต่ง ตัวอย่างของ Selector ที่ใช้บ่อยได้แก่:</p>
+    <ul>
+    <!-- Element Selector -->
+        <li><strong>Element Selector:</strong> เลือกองค์ประกอบตามชื่อแท็ก เช่น h1, p, div</li>
+        <pre><code>
+        h1 {
+            color: green;
+        }
+        </code></pre>
+    <!-- Class Selector -->
+        <li><strong>Class Selector:</strong> เลือกองค์ประกอบที่มีคลาสเฉพาะ โดยใช้จุด (.) ตามด้วยชื่อคลาส</li>
+        <pre><code>
+        .my-class {
+            font-size: 18px;
+        }
+        </code></pre>
+    <!-- ID Selector -->
+        <li><strong>ID Selector:</strong> เลือกองค์ประกอบที่มี ID เฉพาะ โดยใช้เครื่องหมายแฮช (#) ตามด้วยชื่อ ID</li>
+        <pre><code>
+        #my-id {
+            background-color: yellow;
+        }
+        </code></pre>
+    <!-- Attribute Selector -->
+        <li><strong>Attribute Selector:</strong> เลือกองค์ประกอบที่มีคุณสมบัติเฉพาะ เช่น input[type="text"]</li>
+        <pre><code>
+        input[type="text"] {
+            border: 1px solid #ccc;
+        }
+        </code></pre>
+    <!-- Universal Selector -->
+        <li><strong>Universal Selector:</strong> เลือกองค์ประกอบทุกตัวในหน้าเว็บ โดยใช้เครื่องหมาย *</li>
+        <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        </code></pre>
+    <!-- inherited -->
+        <li><strong>Inherited:</strong> คุณสมบัติที่ถูกสืบทอดจากองค์ประกอบแม่ไปยังองค์ประกอบลูก เช่น สีตัวอักษรและแบบอักษร</li>
+        <pre><code>
+        body {
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        </code></pre>
+    <!-- compound -->
+        <li><strong>Compound Selector:</strong> การรวมกันของหลายๆ Selector เพื่อเลือกองค์ประกอบที่ตรงตามเงื่อนไขทั้งหมด</li>
+        <pre><code>
+        div.my-class {
+            border: 1px solid black;
+        }
+        </code></pre>
+    <!-- combinator -->
+        <li><strong>Combinator Selector:</strong> การเลือกองค์ประกอบตามความสัมพันธ์ระหว่างองค์ประกอบ เช่น parent-child หรือ sibling</li>
+        <pre><code>
+        div > p {
+            color: purple;
+        }
+        </code></pre>
+    <!-- child -->
+        <li><strong>Child Selector:</strong> เลือกองค์ประกอบลูกที่เป็นลูกโดยตรงขององค์ประกอบแม่</li>
+        <pre><code>
+        ul > li {
+            list-style-type: square;
+        }
+        </code></pre>
+    <!-- sidling -->
+        <li><strong>Sibling Selector:</strong> เลือกองค์ประกอบที่อยู่ข้างๆ กันในลำดับเดียวกัน เช่น p + p หรือ p ~ p</li>
+        <pre><code>
+        h1 + p {
+            margin-top: 0;
+        }
+        </code></pre>
+    <!-- nesting -->
+        <li><strong>Nesting Selector:</strong> การเลือกองค์ประกอบภายในองค์ประกอบอื่นๆ โดยใช้การซ้อนกันของ Selector</li>
+        <pre><code>
+        table.with-style{
+            border-collapse: collapse;
+            thead {
+                background-color: #f2f2f2;
+            }
+            tbody {
+                tr {
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+        </code></pre>
+    </ul>
+<!-- คะแนนของ specificity -->
+    <h2>คะแนนของ specificity</h2>
+    <p>Specificity คือระบบการให้คะแนนเพื่อกำหนดว่า CSS rule ใดจะถูกนำไปใช้เมื่อมีหลายๆ rule ที่ตรงกับองค์ประกอบเดียวกัน โดยมีหลักการดังนี้:</p>
+    <ul>
+        <li>Inline styles (เช่น style="...") มีคะแนนสูงสุด (1000)</li>
+        <li>ID selectors (#id) มีคะแนนถัดมา (100)</li>
+        <li>Class selectors (.class), attribute selectors ([type="text"]), และ pseudo-classes (:hover) มีคะแนนเท่ากัน (10)</li>
+        <li>Element selectors (div, p, h1) และ pseudo-elements (::before, ::after) มีคะแนนต่ำสุด (1)</li>
+        <li>!important มีคะแนนสูงสุด (1000)</li>
+    </ul>
+    <p>เมื่อมีหลายๆ rule ที่ตรงกับองค์ประกอบเดียวกัน จะนำคะแนน specificity มาคำนวณเพื่อเลือก rule ที่มีคะแนนสูงสุดมาใช้</p>
+<!-- แนวทางการใช้ pseudo-classes และ pseudo-elements -->
+    <h2>แนวทางการใช้ Pseudo-classes และ Pseudo-elements</h2>
+    <p>Pseudo-classes และ Pseudo-elements เป็นเครื่องมือที่ช่วยให้เราสามารถเลือกและตกแต่งองค์ประกอบ HTML ในสถานะหรือรูปแบบพิเศษได้</p>
+<!-- pseudo-classes -->
+    <h3>Pseudo-classes</h3>
+    <p>Pseudo-classes ใช้เพื่อเลือกองค์ประกอบในสถานะพิเศษ เช่น เมื่อเมาส์ชี้, เมื่อองค์ประกอบถูกโฟกัส หรือเมื่อองค์ประกอบเป็นลูกคนแรกของพาเรนต์ ตัวอย่างของ Pseudo-classes ได้แก่:</p>
+    <ul id="Psedo-class">
+        <li>:hover - เลือกองค์ประกอบเมื่อเมาส์ชี้ <br> <div>ตัวอย่าง</div></li>
+        <li>:focus - เลือกองค์ประกอบเมื่อได้รับโฟกัส <br> <input type="text" placeholder="พิมพ์ข้อความที่นี่"></li>
+        <li>:active - เลือกองค์ประกอบเมื่อถูกคลิกหรืออยู่ในสถานะ active <br> <a href="#1">ตัวอย่าง</a></li>
+        <li>:visited - เลือกองค์ประกอบที่ถูกเยี่ยมชมแล้ว <br> <a href="#2">ตัวอย่าง</a></li>
+        <li>:first-child - เลือกองค์ประกอบที่เป็นลูกคนแรกของพาเรนต์ <br> <div>ตัวอย่าง</div></li>
+        <li>:nth-child(n) - เลือกองค์ประกอบที่เป็นลูกลำดับที่ n ของพาเรนต์ <br> <div>ตัวอย่าง</div></li>
+    </ul>
+<!-- pseudo-elements -->
+    <h3>Pseudo-elements</h3>
+    <p>Pseudo-elements ใช้เพื่อสร้างองค์ประกอบเสมือนที่ไม่ได้อยู่ในโครงสร้าง HTML แต่สามารถตกแต่งได้ ตัวอย่างของ Pseudo-elements ได้แก่:</p>
+    <ul>
+        <li>::before - สร้างเนื้อหาก่อนองค์ประกอบที่เลือก</li>
+        <li>::after - สร้างเนื้อหาหลังองค์ประกอบที่เลือก</li>
+        <li>::first-letter - เลือกตัวอักษรตัวแรกขององค์ประกอบ</li>
+        <li>::first-line - เลือกบรรทัดแรกขององค์ประกอบ</li>
+    </ul>
+<!-- การกำหนดรูปแบบข้อความ -->
+    <h2>การกำหนดรูปแบบข้อความ</h2>
+    <p>CSS มีคุณสมบัติหลายอย่างที่ช่วยให้เราสามารถกำหนดรูปแบบข้อความได้อย่างละเอียด ตัวอย่างของคุณสมบัติที่ใช้บ่อยได้แก่:</p>
+    <ul>
+        <li><strong>color:</strong> กำหนดสีของข้อความ</li>
+        <a href="https://www.google.com/search?q=color+picker&oq=color&gs_lcrp=EgZjaHJvbWUqCggEEAAYsQMYgAQyCQgAEEUYORiABDINCAEQABiDARixAxiABDIKCAIQABixAxiABDIHCAMQABiABDIKCAQQABixAxiABDIKCAUQABixAxiABDIKCAYQABixAxiABDIGCAcQABgDMgcICBAAGIAEMgcICRAAGI8C0gEJODg4NmowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">สีอื่นๆ</a>
+        <li><strong>font-family:</strong> กำหนดแบบอักษรของข้อความ</li>
+        <a href="https://fonts.google.com/" target="_blank">ฟอนต์อื่นๆ</a>
+        <li><strong>font-size:</strong> กำหนดขนาดตัวอักษร</li>
+        <li><strong>font-weight:</strong> กำหนดความหนาของตัวอักษร (เช่น normal, bold)</li>
+        <li><strong>text-align:</strong> กำหนดการจัดแนวของข้อความ (เช่น left, center, right)</li>
+        <li><strong>text-decoration:</strong> กำหนดการตกแต่งข้อความ (เช่น underline, line-through)</li>
+        <li><strong>line-height:</strong> กำหนดระยะห่างระหว่างบรรทัดของข้อความ</li>
+    </ul>
+<!-- กำหนดรูปร่าง Box Model -->
+    <h2>Box Model</h2>
+    <p>Box Model เป็นแนวคิดพื้นฐานใน CSS ที่อธิบายถึงโครงสร้างขององค์ประกอบ HTML แต่ละตัว ซึ่งประกอบด้วยส่วนต่างๆ ดังนี้:</p>
+    <ul>
+        <li><strong style=" color: blue;">Content:</strong> เนื้อหาภายในกล่อง เช่น ข้อความหรือรูปภาพ</li>
+        <li><strong style="color: rgb(34, 255, 126);">Padding:</strong> พื้นที่ว่างระหว่างเนื้อหากับขอบของกล่อง</li>
+        <li><strong style="color: rgb(252, 226, 123);">Border:</strong> ขอบของกล่องที่ล้อมรอบ Padding และ Content</li>
+        <li><strong style="color: rgb(161, 108, 43);">Margin:</strong> พื้นที่ว่างระหว่างกล่องกับองค์ประกอบอื่นๆ รอบข้าง</li>
+    </ul>
+    <div class="box">
+        <p style="color: blue;">text</p>
+    </div>
+    <p>เราสามารถกำหนดค่าต่างๆ ของ Box Model ได้ผ่านคุณสมบัติต่างๆ ใน CSS เช่น:</p>
+    <ul>
+        <li><strong>width:</strong> กำหนดความกว้างของกล่อง</li>
+        <li><strong>height:</strong> กำหนดความสูงของกล่อง</li>
+        <li><strong>padding:</strong> กำหนดพื้นที่ว่างภายในกล่อง</li>
+        <li><strong>border:</strong> กำหนดลักษณะของขอบกล่อง</li>
+        <ul>
+            <li><strong>border-width:</strong> กำหนดความหนาของขอบกล่อง</li>
+            <li><strong>border-style:</strong> กำหนดรูปแบบของขอบกล่อง (เช่น solid, dashed, dotted)</li>
+            <li><strong>border-color:</strong> กำหนดสีของขอบกล่อง</li>
+            <li><strong>border-radius:</strong> กำหนดรูปร่างของขอบกล่อง (เช่น วงกลม)</li>
+        </ul>
+        <li><strong>margin:</strong> กำหนดพื้นที่ว่างภายนอกกล่อง</li>
+        <li><strong>outline:</strong> กำหนดเส้นขอบภายนอกของกล่อง</li>
+        <li><strong>left:</strong> กำหนดตำแหน่งด้านซ้ายของกล่อง</li>
+        <li><strong>right:</strong> กำหนดตำแหน่งด้านขวาของกล่อง</li>
+        <li><strong>top:</strong> กำหนดตำแหน่งด้านบนของกล่อง</li>
+        <li><strong>bottom:</strong> กำหนดตำแหน่งด้านล่างของกล่อง</li>
+        <li><strong>box-shadow:</strong> กำหนดเงาของกล่อง</li>
+        <li><strong>overflow:</strong> กำหนดการจัดการเนื้อหาที่เกินขอบของกล่อง</li>
+        <ul>
+            <li><strong>overflow-x:</strong> กำหนดการจัดการเนื้อหาที่เกินขอบด้านซ้ายและขวา</li>
+            <li><strong>overflow-y:</strong> กำหนดการจัดการเนื้อหาที่เกินขอบด้านบนและล่าง</li>
+        </ul>
+    </ul>
+<!-- เทคนิคพิเศษเกี่ยวกับพื้นหลังและรูปภาพ -->
+    <h2>เทคนิคพิเศษเกี่ยวกับพื้นหลังและรูปภาพ</h2>
+    <p>CSS มีคุณสมบัติหลายอย่างที่ช่วยให้เราสามารถกำหนดลักษณะของพื้นหลังและรูปภาพได้อย่างสร้างสรรค์ ตัวอย่างของคุณสมบัติที่ใช้บ่อยได้แก่:</p>
+    <ul>
+        <li><strong>background-color:</strong> กำหนดสีพื้นหลังขององค์ประกอบ</li>
+        <li><strong>background-image:</strong> กำหนดรูปภาพพื้นหลังขององค์ประกอบ</li>
+        <li><strong>background-size:</strong> กำหนดขนาดของรูปภาพพื้นหลัง (เช่น cover, contain)</li>
+        <li><strong>background-position:</strong> กำหนดตำแหน่งของรูปภาพพื้นหลัง (เช่น center, top right)</li>
+        <li><strong>background-repeat:</strong> กำหนดการทำซ้ำของรูปภาพพื้นหลัง (เช่น no-repeat, repeat-x)</li>
+        <li><strong>background-attachment:</strong> กำหนดว่าพื้นหลังจะเคลื่อนไหวหรือไม่เมื่อผู้ใช้เลื่อนหน้าต่าง</li>
+        <li><strong>backdrop-filter:</strong> ใช้เพื่อเพิ่มเอฟเฟกต์พิเศษให้กับพื้นหลังขององค์ประกอบ เช่น blur</li>
+        <li><strong>background: radial-gradient;</strong> กำหนดสีพื้นหลังแบบ radial gradient</li>
+        <a href="https://cssgradient.io/" target="_blank">สำหรับหาสีพื้นหลัง</a>
+        <li><strong>opacity:</strong> กำหนดความโปร่งใสขององค์ประกอบ</li>
+        <li><strong>filter:</strong> ใช้สำหรับเพิ่มเอฟเฟกต์พิเศษให้กับรูปภาพ เช่น blur, grayscale</li>
+        <li><strong>object-fit:</strong> กำหนดวิธีการปรับขนาดของรูปภาพภายในกล่อง</li>
+    </ul>
+<!-- layout แบบ flexbox -->
+    <h2>layout แบบ Flexbox</h2>
+    <p>Flexbox (Flexible Box Layout) เป็นเทคนิคการจัดวางองค์ประกอบใน CSS ที่ช่วยให้เราสามารถจัดการกับการจัดวางและการจัดตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ได้อย่างง่ายดายและยืดหยุ่น</p>
+    <p>องประกอบของ Flexbox ได้แก่:</p>
+    <ul>
+        <li><strong style="color: #c702fe;">container:</strong> คอนเทนเนอร์ที่ใช้ในการจัดวางองค์ประกอบ</li>
+        <li><strong style="color: #cbd112;">items:</strong> องค์ประกอบภายในคอนเทนเนอร์ที่ถูกจัดวาง</li>
+    </ul>
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+    </div>
+    <p>คุณสมบัติหลักของ Flexbox ได้แก่:</p>
+    <ul>
+        <li><strong>display: flex;</strong> กำหนดให้คอนเทนเนอร์เป็น Flexbox</li>
+        <li><strong>flex-direction:</strong> กำหนดทิศทางการจัดวางองค์ประกอบ</li>
+        <ul>
+            <li><strong>row:</strong> จัดวางองค์ประกอบในแนวนอนจากซ้ายไปขวา</li>
+            <li><strong>column:</strong> จัดวางองค์ประกอบในแนวตั้งจากบนลงล่าง</li>
+        </ul>
+        <li><strong>justify-content:</strong> กำหนดการจัดตำแหน่งในแนวนอนขององค์ประกอบภายในคอนเทนเนอร์</li>
+        <ul>
+            <li><strong>flex-start:</strong> จัดวางองค์ประกอบที่ด้านซ้ายของคอนเทนเนอร์</li>
+            <li><strong>flex-end:</strong> จัดวางองค์ประกอบที่ด้านขวาของคอนเทนเนอร์</li>
+            <li><strong>center:</strong> จัดวางองค์ประกอบที่ตรงกลางของคอนเทนเนอร์</li>
+            <li><strong>space-between:</strong> จัดวางองค์ประกอบให้มีช่องว่างระหว่างกัน</li>
+            <li><strong>space-around:</strong> จัดวางองค์ประกอบให้มีช่องว่างรอบๆ</li>
+        </ul>
+        <li><strong>align-items:</strong> กำหนดการจัดตำแหน่งในแนวตั้งขององค์ประกอบภายในคอนเทนเนอร์</li>
+        <ul>
+            <li><strong>flex-start:</strong> จัดวางองค์ประกอบที่ด้านบนของคอนเทนเนอร์</li>
+            <li><strong>flex-end:</strong> จัดวางองค์ประกอบที่ด้านล่างของคอนเทนเนอร์</li>
+            <li><strong>center:</strong> จัดวางองค์ประกอบที่ตรงกลางของคอนเทนเนอร์</li>
+            <li><strong>stretch:</strong> ขยายองค์ประกอบให้เต็มความสูงของคอนเทนเนอร์</li>
+        </ul>
+        <li><strong>flex-wrap:</strong> กำหนดว่าควรให้บรรทัดใหม่เกิดขึ้นเมื่อองค์ประกอบเกินขนาดคอนเทนเนอร์หรือไม่</li>
+        <li><strong>flex-grow:</strong> กำหนดว่าองค์ประกอบสามารถขยายตัวได้มากน้อยเพียงใดเมื่อมีพื้นที่ว่างในคอนเทนเนอร์</li>
+        <li><strong>flex-shrink:</strong> กำหนดว่าองค์ประกอบสามารถหดตัวได้มากน้อยเพียงใดเมื่อไม่มีพื้นที่เพียงพอในคอนเทนเนอร์</li>
+        <li><strong>align-self:</strong> กำหนดการจัดตำแหน่งขององค์ประกอบแต่ละตัวแยกจากกัน</li>
+    </ul>
+<!-- layout แบบ Grid -->
+    <h2>layout แบบ Grid</h2>
+    <p>CSS Grid Layout เป็นเทคนิคการจัดวางองค์ประกอบในรูปแบบตารางที่ช่วยให้เราสามารถสร้างเลย์เอาต์ที่ซับซ้อนได้อย่างง่ายดายและยืดหยุ่น</p>
+    <p>องค์ประกอบของ Grid ได้แก่:</p>
+    <ul>
+        <li><strong style="color: #2196F3">grid container:</strong> คอนเทนเนอร์ที่ใช้ในการจัดวางองค์ประกอบในรูปแบบตาราง</li>
+        <li><strong style="color: rgba(159, 234, 255, 0.8)">grid items:</strong> องค์ประกอบภายในคอนเทนเนอร์ที่ถูกจัดวางในรูปแบบตาราง</li>
+    </ul>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+    <p>คุณสมบัติหลักของ Grid ได้แก่:</p>
+    <ul>
+        <li><strong>display: grid;</strong> กำหนดให้คอนเทนเนอร์เป็น Grid</li>
+        <li><strong>grid-template-columns:</strong> กำหนดจำนวนและขนาดของคอลัมน์ในตาราง</li>
+        <li><strong>grid-template-rows:</strong> กำหนดจำนวนและขนาดของแถวในตาราง</li>
+        <li><strong>grid-gap:</strong> กำหนดระยะห่างระหว่างแถวและคอลัมน์ในตาราง</li>
+        <li><strong>justify-items:</strong> กำหนดการจัดตำแหน่งในแนวนอนขององค์ประกอบภายในกริด</li>
+        <li><strong>align-items:</strong> กำหนดการจัดตำแหน่งในแนวตั้งขององค์ประกอบภายในกริด</li>
+        <li><strong>grid-column:</strong> กำหนดตำแหน่งและขนาดขององค์ประกอบในแนวนอน</li>
+        <li><strong>grid-row:</strong> กำหนดตำแหน่งและขนาดขององค์ประกอบในแนวตั้ง</li>
+    </ul>
+<!-- layout แบบ column -->
+    <h2>layout แบบ Column</h2>
+    <p>CSS Multi-column Layout เป็นเทคนิคการจัดวางองค์ประกอบในรูปแบบหลายคอลัมน์ที่ช่วยให้เราสามารถสร้างเลย์เอาต์ที่มีลักษณะคล้ายกับหนังสือพิมพ์หรือนิตยสารได้อย่างง่ายดาย</p>
+    <p>คุณสมบัติหลักของ Multi-column ได้แก่:</p>
+    <ul>
+        <li><strong>column-count:</strong> กำหนดจำนวนคอลัมน์ที่ต้องการให้แสดง</li>
+        <li><strong>column-width:</strong> กำหนดความกว้างของแต่ละคอลัมน์</li>
+        <li><strong>column-gap:</strong> กำหนดระยะห่างระหว่างคอลัมน์</li>
+        <li><strong>column-rule:</strong> กำหนดเส้นแบ่งระหว่างคอลัมน์</li>
+    </ul>
+<!-- เทคนิคการใช้ positioning -->
+    <h2>เทคนิคการใช้ Positioning</h2>
+    <p>CSS Positioning เป็นเทคนิคที่ช่วยให้เราสามารถกำหนดตำแหน่งขององค์ประกอบบนหน้าเว็บได้อย่างแม่นยำ โดยใช้คุณสมบัติต่างๆ เช่น:</p>
+    <ul>
+        <li><strong>position:</strong> กำหนดวิธีการจัดวางองค์ประกอบ</li>
+        <ul>
+            <li><strong>static:</strong> องค์ประกอบจะจัดวางตามลำดับปกติของหน้าเว็บ</li>
+            <li><strong>relative:</strong> องค์ประกอบจะจัดวางตามลำดับปกติของหน้าเว็บ แต่สามารถปรับตำแหน่งได้โดยใช้ค่า top, right, bottom, left</li>
+            <li><strong>absolute:</strong> องค์ประกอบจะจัดวางตามตำแหน่งที่กำหนดโดยใช้ค่า top, right, bottom, left ซึ่งอ้างอิงจากพื้นที่ของพาเรนต์ที่มี position: relative</li>
+            <li><strong>fixed:</strong> องค์ประกอบจะจัดวางตามตำแหน่งที่กำหนดโดยใช้ค่า top, right, bottom, left ซึ่งอ้างอิงจากหน้าต่างเบราว์เซอร์</li>
+            <li><strong>sticky:</strong> องค์ประกอบจะจัดวางตามลำดับปกติของหน้าเว็บ แต่เมื่อผู้ใช้เลื่อนหน้าเว็บไปถึงตำแหน่งที่กำหนด จะกลายเป็น fixed</li>
+        </ul>
+        <li><strong>top, right, bottom, left:</strong> กำหนดระยะห่างจากขอบของพาเรนต์หรือหน้าต่างเบราว์เซอร์ ขึ้นอยู่กับค่าของ position</li>
+        <li><strong>z-index:</strong> กำหนดลำดับชั้นขององค์ประกอบเมื่อมีการซ้อนทับกัน</li>
+    </ul>
+<!-- ปรับเปลี่ยนเนื้อหาแบบ transition และการเปลี่ยนรูปร่าง transform -->
+    <h2>ปรับเปลี่ยนเนื้อหาแบบ Transition และการเปลี่ยนรูปร่าง Transform</h2>
+    <p>CSS Transition และ Transform เป็นเทคนิคที่ช่วยให้เราสามารถสร้างเอฟเฟกต์การเปลี่ยนแปลงและการเคลื่อนไหวขององค์ประกอบบนหน้าเว็บได้อย่างน่าสนใจ</p>
+    <p>คุณสมบัติหลักของ Transition ได้แก่:</p>
+    <ul>
+        <li><strong>transition-property:</strong> กำหนดคุณสมบัติที่ต้องการให้เกิดการเปลี่ยนแปลง</li>
+        <li><strong>transition-duration:</strong> กำหนดระยะเวลาที่ใช้ในการเปลี่ยนแปลง</li>
+        <li><strong>transition-timing-function:</strong> กำหนดรูปแบบของการเปลี่ยนแปลง</li>
+        <ul>
+            <li><strong>ease:</strong> การเปลี่ยนแปลงเริ่มต้นช้า เร็วขึ้นในช่วงกลาง และช้าลงเมื่อสิ้นสุด</li>
+            <li><strong>linear:</strong> การเปลี่ยนแปลงที่มีความเร็วคงที่ตลอดเวลา</li>
+            <li><strong>ease-in:</strong> การเปลี่ยนแปลงที่เริ่มต้นช้าและเร่งความเร็วขึ้นเมื่อสิ้นสุด</li>
+            <li><strong>ease-out:</strong> การเปลี่ยนแปลงที่เริ่มต้นเร็วและช้าลงเมื่อสิ้นสุด</li>
+        </ul>
+        <li><strong>transition-delay:</strong> กำหนดเวลาหน่วงก่อนที่จะเริ่มการเปลี่ยนแปลง</li>
+    </ul>
+    <p>คุณสมบัติหลักของ Transform ได้แก่:</p>
+    <ul>
+        <li><strong>transform: translate(x, y);</strong> ย้ายองค์ประกอบไปยังตำแหน่งใหม่ตามแกน x และ y</li>
+        <li><strong>transform: rotate(angle);</strong> หมุนองค์ประกอบตามมุมที่กำหนด</li>
+        <li><strong>transform: scale(sx, sy);</strong> ปรับขนาดองค์ประกอบตามแกน x และ y</li>
+        <li><strong>transform: skew(ax, ay);</strong> เอียงองค์ประกอบตามแกน x และ y</li>
+    </ul>
+<!-- การใช้งาน animetion -->
+    <h2>การใช้งาน Animation</h2>
+    <p>CSS Animation เป็นเทคนิคที่ช่วยให้เราสามารถสร้างการเคลื่อนไหวขององค์ประกอบบนหน้าเว็บได้อย่างน่าสนใจ โดยใช้คุณสมบัติหลักดังนี้:</p>
+    <ul>
+        <li><strong>@keyframes:</strong> กำหนดชุดของขั้นตอนการเปลี่ยนแปลงที่ต้องการให้เกิดขึ้นในระหว่างการเคลื่อนไหว</li>
+        <pre>
+        @keyframes example {
+            0% { background-color: red; }
+            50% { background-color: yellow; }
+            100% { background-color: green; }
+        }
+        </pre>
+        <li><strong>animation-name:</strong> กำหนดชื่อของชุดขั้นตอนที่ต้องการใช้</li>
+        <li><strong>animation-duration:</strong> กำหนดระยะเวลาที่ใช้ในการเคลื่อนไหว</li>
+        <li><strong>animation-timing-function:</strong> กำหนดรูปแบบของการเคลื่อนไหว</li>
+        <li><strong>animation-delay:</strong> กำหนดเวลาหน่วงก่อนที่จะเริ่มการเคลื่อนไหว</li>
+        <li><strong>animation-iteration-count:</strong> กำหนดจำนวนครั้งที่ต้องการให้การเคลื่อนไหวเกิดขึ้น</li>
+        <li><strong>animation-direction:</strong> กำหนดทิศทางของการเคลื่อนไหว</li>
+        <ul>
+            <li><strong>normal:</strong> การเคลื่อนไหวจะเกิดขึ้นจากจุดเริ่มต้นไปยังจุดสิ้นสุด</li>
+            <li><strong>reverse:</strong> การเคลื่อนไหวจะเกิดขึ้นจากจุดสิ้นสุดกลับไปยังจุดเริ่มต้น</li>
+            <li><strong>alternate:</strong> การเคลื่อนไหวจะสลับทิศทางในแต่ละรอบ</li>
+        </ul>
+    </ul>
+<!-- วิธีการออกแบบเว็บให้ตอบสนอง (Responsive Web Design) -->
+    <h2>วิธีการออกแบบเว็บให้ตอบสนอง (Responsive Web Design)</h2>
+    <p>Responsive Web Design เป็นแนวทางการออกแบบเว็บไซต์ที่ช่วยให้เว็บไซต์สามารถปรับตัวและแสดงผลได้อย่างเหมาะสมบนอุปกรณ์ที่มีขนาดหน้าจอแตกต่างกัน เช่น คอมพิวเตอร์เดสก์ท็อป, แท็บเล็ต, และสมาร์ทโฟน</p>
+    <p>เทคนิคหลักในการสร้าง Responsive Web Design ได้แก่:</p>
+    <ul>
+        <li><strong>Media Queries:</strong> ใช้เพื่อกำหนดสไตล์ที่แตกต่างกันตามขนาดหน้าจอของอุปกรณ์</li>
+        <pre><code>
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }</code></pre>
+        <li><strong>Flexible Grid Layouts:</strong> ใช้ระบบกริดที่ยืดหยุ่นเพื่อจัดวางองค์ประกอบบนหน้าเว็บ</li>
+        <li><strong>Flexible Images and Media:</strong> ใช้คุณสมบัติ CSS เช่น max-width: 100%; เพื่อให้รูปภาพและสื่ออื่นๆ ปรับขนาดตามขนาดของคอนเทนเนอร์</li>
+        <li><strong>Viewport Meta Tag:</strong> ใช้แท็ก meta ในส่วนหัวของเอกสาร HTML เพื่อควบคุมการแสดงผลบนอุปกรณ์เคลื่อนที่</li>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    </ul>
+</body>
+</html>

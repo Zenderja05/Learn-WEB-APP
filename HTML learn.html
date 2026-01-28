@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+</head>
+<style>
+    #TAG {
+        color: black;
+        text-decoration: none;
+        border: solid 2px black;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+    }
+    #TAG:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+<!-- โครงสร้าง HTML -->
+    <h1 id="HTML">HTML คืออะไร?</h1>
+    <p>HTML ย่อมาจาก HyperText Markup Language เป็นภาษามาร์กอัปที่ใช้ในการสร้างและออกแบบหน้าเว็บ</p>
+    <h2>องค์ประกอบพื้นฐานของ HTML</h2>
+    <p><strong>ตัวอย่างโครงสร้าง:</strong>&lt;a href="https://www.google.com"&gt;google&lt;/a&gt;</p>
+    <table border="1">
+        <tr>
+            <th>ส่วนประกอบ</th>
+            <th>คำอธิบาย</th>
+        </tr>
+        <tr>
+            <td>&lt;a&gt;</td>
+            <td>แท็กเปิด</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td>คุณสมบัติ</td>
+        </tr>
+        <tr>
+            <td>"https://www.google.com"</td>
+            <td>ค่า</td>
+        </tr>
+        <tr>
+            <td>google</td>
+            <td>เนื้อหา</td>
+        </tr>
+        <tr>
+            <td>&lt;/a&gt;</td>
+            <td>แท็กปิด</td>
+        </tr>
+    </table>
+    <!-- Comment tag -->
+    <h2 id="Comment">Comment tag</h2>
+    <p>Comment tag ใช้สำหรับใส่คำอธิบายหรือบันทึกในโค้ด HTML ซึ่งจะไม่แสดงผลบนหน้าเว็บ</p>
+    <p>รูปแบบการเขียน Comment tag:</p>
+    <pre>&lt;!-- นี่คือคำอธิบายหรือบันทึก --&gt;    (คีย์ลัด Ctrl + /)</pre>
+<!-- ส่วนสำคัญที่ควรมี -->
+    <h2>ส่วนสำคัญที่ควรมีในเอกสาร HTML</h2>
+    <ul>
+        <li><strong>&lt;!DOCTYPE html&gt;:</strong> ใช้เพื่อระบุว่าเอกสารนี้เป็นเอกสาร HTML5</li>
+        <li><strong>&lt;html lang="..."&gt;:</strong> ใช้เพื่อระบุภาษาหลักของเอกสาร HTML</li>
+        <li><strong>&lt;head&gt;:</strong> ส่วนหัวของเอกสาร HTML ซึ่งใช้สำหรับใส่ข้อมูลเมตา เช่น ชื่อเรื่อง,
+            การเชื่อมโยงไฟล์ CSS, สคริปต์ JavaScript เป็นต้น</li>
+        <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> ใช้เพื่อกำหนดการเข้ารหัสตัวอักษรของเอกสาร HTML เป็น UTF-8
+            ซึ่งรองรับตัวอักษรหลากหลายภาษา</li>
+        <li><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:</strong>
+            ใช้เพื่อควบคุมการแสดงผลบนอุปกรณ์เคลื่อนที่ โดยกำหนดความกว้างของ viewport ให้เท่ากับความกว้างของอุปกรณ์
+            และตั้งค่าเริ่มต้นของการซูมเป็น 1.0</li>
+        <li><strong>&lt;title&gt;:</strong> ใช้เพื่อกำหนดชื่อเรื่องของหน้าเว็บ ซึ่งจะแสดงในแถบชื่อเรื่องของเบราว์เซอร์
+        </li>
+        <li><strong>&lt;body&gt;:</strong> ส่วนเนื้อหาหลักของเอกสาร HTML ซึ่งใช้สำหรับใส่เนื้อหาที่จะแสดงบนหน้าเว็บ เช่น
+            ข้อความ, รูปภาพ, ลิงก์ เป็นต้น</li>
+    </ul>
+    <h2>ถ้าต้องการรู้แท็กเพิ่มเติม</h2>
+        <a href="TAG.html" id="TAG" target="_blank">แท็กเพิ่มเติม</a>
+<!-- การลิงก์ -->
+    <h2 id="link">การลิงก์ข้อมูล</h2>
+    <p>การลิงก์ข้อมูลมีอยู่หลายประเภท เช่น ลิงก์ภายในเว็บไซต์เดียวกัน, ลิงก์ไปยังเว็บไซต์อื่น, ลิงก์ไปยังส่วนต่างๆ
+        ของหน้าเว็บ เป็นต้น</p>
+    <p><strong>ตัวอย่างการลิงก์แต่ละลิงก์</strong></p>
+    <ul>
+        <li><strong>ลิงก์ภายในเว็บไซต์เดียวกัน:</strong> &lt;a href="page2.html"&gt;ไปยังหน้าที่ 2&lt;/a&gt;</li>
+        <li><strong>ลิงก์ไปยังเว็บไซต์อื่น:</strong> &lt;a href="https://www.example.com"&gt;ไปยัง Example.com&lt;/a&gt;
+        </li>
+        <ul>
+            <li><a href="http://www.google.com">&lt;a href="http://www.google.com"&gt;&lt;/a&gt;</a></li>
+        </ul>
+        <li><strong>ลิงก์ไปยังส่วนต่างๆ ของหน้าเว็บ:</strong> &lt;a href="#section1"&gt;ไปยังส่วนที่ 1&lt;/a&gt;</li>
+        <ul>
+            <li><a href="#Comment">&lt;a href="#Comment"&gt;&lt;/a&gt;</a></li>
+        </ul>
+    </ul>
+    <h2>ในกรณีที่ต้องลิงก์ไฟล์ในโฟรเดอร์อื่น</h2>
+    <p>ถ้าไฟล์ที่ต้องการลิงก์อยู่ในโฟรเดอร์อื่น ต้องระบุเส้นทางสัมพัทธ์ (relative path) หรือเส้นทางสัมบูรณ์ (absolute
+        path)</p>
+    <ul>
+        <li><strong>เส้นทางสัมพัทธ์ (relative path):</strong> &lt;a
+            href="../folder/page.html"&gt;ไปยังหน้าในโฟรเดอร์อื่น&lt;/a&gt;</li>
+        <li><strong>เส้นทางสัมบูรณ์ (absolute path):</strong> &lt;a
+            href="https://www.example.com/folder/page.html"&gt;ไปยังหน้าในเว็บไซต์อื่น&lt;/a&gt;</li>
+    </ul>
+    <h2>และอีกกรณีนึงถ้าขี้เกียจเลื่อนสกอร์เมาส์</h2>
+    <p>สามารถสร้างลิงก์กลับไปยังด้านบนของหน้าเว็บได้ด้วยการใช้แท็ก &lt;a&gt; ร่วมกับแอตทริบิวต์ href ที่ชี้ไปยัง id
+        ขององค์ประกอบที่อยู่ด้านบนสุดของหน้า</p>
+    <p><strong>ตัวอย่าง:</strong> &lt;a href="#top"&gt;กลับไปด้านบน&lt;/a&gt;</p>
+<!-- การแสดงสื่อมีเดีย -->
+    <h2>การแสดงสื่อมีเดียใน HTML</h2>
+    <p>HTML รองรับการแสดงสื่อมีเดียต่างๆ เช่น รูปภาพ, วิดีโอ, และเสียง โดยใช้แท็กต่างๆ เช่น &lt;img&gt;, &lt;video&gt;,
+        และ &lt;audio&gt;</p>
+<!-- ตัวอย่างการแสดงรูปภาพ -->
+    <p><strong>ตัวอย่างการแสดงรูปภาพ:</strong></p>
+    <pre>
+    &lt;img src="autumn-950897_1280.jpg" alt="คำอธิบายรูปภาพ" width="150px" height="100px"&gt;
+    </pre>
+    <img src="autumn-950897_1280.jpg" alt="" width="150px" height="100px">
+<!-- ตัวอย่างการแสดงเสียง: -->
+    <p><strong>ตัวอย่างการแสดงเสียง:</strong></p>
+    <pre>
+    &lt;audio controls&gt;
+        &lt;source src="LIELIFE ： เกลียดตัวเอง ( Hate myself ).mp3" type="audio/mpeg"&gt;
+    &lt;/audio&gt;
+    </pre>
+    <audio controls>
+        <source src="LIELIFE ： เกลียดตัวเอง ( Hate myself ).mp3" type="audio/mpeg">
+    </audio>
+<!-- ตัวอย่างการแสดงวิดีโอ: -->
+    <p><strong>ตัวอย่างการแสดงวิดีโอ:</strong></p>
+    <pre>
+    &lt;video width="150px" height="auto" controls&gt;
+        &lt;source src="Download.mp4" type="video/mp4"&gt;
+    &lt;/video&gt;
+    </pre>
+    <video width="150px" height="auto" controls>
+        <source src="Download.mp4" type="video/mp4">
+    </video>
+
+<!-- โครงสร้างตาราง -->
+    <h2 id="link">โครงสร้างตารางใน HTML</h2>
+    <p>ตารางใน HTML ใช้แท็ก &lt;table&gt; เพื่อสร้างตาราง และใช้แท็ก &lt;tr&gt; เพื่อสร้างแถว, &lt;th&gt;
+        เพื่อสร้างหัวข้อคอลัมน์, &lt;td&gt; เพื่อสร้างเซลล์ข้อมูล, &lt;thead&gt; เพื่อสร้างส่วนหัวของตาราง,
+        &lt;tbody&gt; เพื่อสร้างส่วนเนื้อหาของตาราง และมีการรวมเซลล์ด้วย &lt;colspan&gt;ขยายแนวนอน และ
+        &lt;rowspan&gt;ขยายแนวตั้ง</p>
+    <p><strong>ตัวอย่างโครงสร้างตาราง:</strong></p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>th</th>
+                <th>th</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+            <tr>
+                <td colspan="2">colspan</td>
+            </tr>
+            <tr>
+                <td rowspan="2">rowspan</td>
+                <td>td</td>
+            </tr>
+            <tr>
+                <td>td</td>
+            </tr>
+        </tbody>
+    </table>
+<!-- การสร้างแบบฟรอม -->
+    <h2>การสร้างแบบฟอร์มใน HTML</h2>
+    <p>แบบฟอร์มใน HTML ใช้แท็ก &lt;form&gt; เพื่อสร้างแบบฟอร์ม และใช้แท็กต่างๆ เช่น &lt;input&gt;, &lt;textarea&gt;,
+        &lt;select&gt;, &lt;option&gt;, &lt;label&gt; เพื่อสร้างองค์ประกอบต่างๆ ในแบบฟอร์ม
+        และมี<strong>คีย์สำคัญ:</strong>required จะทำให้ฟิลด์นั้นเป็นฟิลด์ที่บังคับกรอก</p>
+    <p><strong>ตัวอย่างโครงสร้างแบบฟอร์ม:</strong></p>
+    <form action="#link">
+        <fieldset>
+            <legend>ชนิดข้อความ</legend>
+            <div><label for="text">text</label><input type="text" id="text" name="text" placeholder="ข้อความ"></div>
+            <div><label for="password">password</label><input type="password" id="password" name="password"
+                    placeholder="รหัสผ่าน"></div>
+            <div><label for="search">search</label><input type="search" id="search" name="search"
+                    placeholder="ค้นหา"></div>
+            <div><label for="tel">tel</label><input type="tel" id="tel" name="tel" placeholder="081-234-5678"></div>
+            <div><label for="url">url</label><input type="url" id="url" name="url"
+                    placeholder="https://example.com"></div>
+            <div><label for="email">email</label><input type="email" id="email" name="email"
+                    placeholder="name@example.com"></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ตัวเลขและวันที่</legend>
+            <div><label for="number">number</label><input type="number" id="number" name="number" min="0" max="100"
+                    value="5"></div>
+            <div><label for="range">range</label><input type="range" id="range" name="range" min="0" max="10"
+                    value="3"></div>
+            <div><label for="date">date</label><input type="date" id="date" name="date"></div>
+            <div><label for="time">time</label><input type="time" id="time" name="time"></div>
+            <div><label for="datetime">datetime-local</label><input type="datetime-local" id="datetime"
+                    name="datetime"></div>
+            <div><label for="month">month</label><input type="month" id="month" name="month"></div>
+            <div><label for="week">week</label><input type="week" id="week" name="week"></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ตัวเลือกและหลายบรรทัด</legend>
+            <div>
+                <label>radio</label>
+                <input type="radio" id="r1" name="choice" value="a"><label for="r1">A</label>
+                <input type="radio" id="r2" name="choice" value="b"><label for="r2">B</label>
+            </div>
+            <div>
+                <label>checkbox</label>
+                <input type="checkbox" id="c1" name="agree" value="yes"><label for="c1">ยอมรับ</label>
+            </div>
+            <div><label for="select">select</label>
+                <select id="select" name="select">
+                    <option value="">-- เลือก --</option>
+                    <option value="one">หนึ่ง</option>
+                    <option value="two">สอง</option>
+                </select>
+            </div>
+            <div><label for="mult">select multiple</label>
+                <select id="mult" name="mult" multiple size="3">
+                    <option value="m1">m1</option>
+                    <option value="m2">m2</option>
+                    <option value="m3">m3</option>
+                </select>
+            </div>
+            <div><label for="textarea">textarea</label><textarea id="textarea" name="textarea" rows="3" cols="30"
+                    placeholder="ข้อความยาว"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ไฟล์ สี และฟิลด์พิเศษ</legend>
+            <div><label for="file">file</label><input type="file" id="file" name="file"></div>
+            <div><label for="color">color</label><input type="color" id="color" name="color" value="#ff0000"></div>
+            <div><label for="hidden">hidden</label><input type="hidden" id="hidden" name="hidden" value="secret">
+            </div>
+            <div><label for="image">image (ปุ่มรูป)</label><input type="image" id="image" name="img"
+                    src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23007acc'/%3E%3C/svg%3E"
+                    alt="imgbtn"></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ปุ่ม</legend>
+            <div><label>buttons</label>
+                <input type="button" value="ปุ่มทั่วไป">
+                <input type="reset" value="รีเซ็ต">
+                <input type="submit" value="ส่งฟอร์ม">
+            </div>
+        </fieldset>
+    </form>
+    <h2>HTML Entity</h2>
+        <p>HTML Entity (เอนทิตี HTML) คือ รหัสพิเศษที่ใช้แทนตัวอักษรหรือสัญลักษณ์ที่มีความหมายพิเศษใน HTML
+            เพื่อป้องกันไม่ให้เบราว์เซอร์ตีความผิด ตัวอย่างเช่น การใช้ &amp; แทนเครื่องหมาย &lt; หรือ &gt;
+            แทนเครื่องหมาย > เป็นต้น</p>
+        <p>ตัวอย่าง HTML Entity ที่ใช้บ่อย:</p>
+        <ul>
+            <li>&amp;nbsp; : ช่องว่าง (non-breaking space)</li>
+            <li>&amp;lt; : เครื่องหมาย &lt; (less than)</li>
+            <li>&amp;gt; : เครื่องหมาย &gt; (greater than)</li>
+            <li>&amp;amp; : เครื่องหมาย &amp; (ampersand)</li>
+            <li>&amp;quot; : เครื่องหมาย " (double quote)</li>
+            <li>&amp;apos; : เครื่องหมาย ' (single quote)</li>
+            <li>&amp;copy; : สัญลักษณ์ลิขสิทธิ์ (©)</li>
+            <li>&amp;reg; : สัญลักษณ์เครื่องหมายการค้า (®)</li>
+            <li>&amp;euro; : สัญลักษณ์ยูโร (€)</li>
+            <li>&amp;pound; : สัญลักษณ์ปอนด์ (£)</li>
+            <li>&amp;yen; : สัญลักษณ์เยน (¥)</li>
+            <li>&amp;cent; : สัญลักษณ์เซ็นต์ (¢)</li>
+            <li>&amp;sect; : สัญลักษณ์มาตรา (§)</li>
+            <li>&amp;para; : สัญลักษณ์ย่อหน้าหรือพารากราฟ (¶)</li>
+            <li>&amp;bull; : สัญลักษณ์หัวข้อย่อย (•)</li>
+            <li>&amp;hellip; : สัญลักษณ์จุดไข่ปลา (…) </li>
+            <li>&amp;mdash; : สัญลักษณ์ขีดยาว (—)</li>
+            <li>&amp;ndash; : สัญลักษณ์ขีดกลาง (–)</li>
+            <li>&amp;trade; : สัญลักษณ์เครื่องหมายการค้า (™)</li>
+        </ul>
+</body>
+
+</html>
