@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML learn</title>
+</head>
+<body>
+    <header>
+        <h1>HTML</h1>
+    </header>
+
+    <section id="HTML">
+        <h2>โครงสร้างพื้นฐานของ HTML</h2>
+        <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre>
+        <ul>
+            <li><b>&lt;!DOCTYPE html&gt;</b> - ประกาศชนิดของเอกสารว่าเป็น HTML5</li>
+            <li><b>&lt;html&gt;</b> - ตัว container หลักของหน้าเว็บ</li>
+            <li><b>&lt;head&gt;</b> - ข้อมูลที่ไม่แสดงในหน้าเว็บ เช่น title, meta tags</li>
+            <ul>
+                <li>&lt;meta charset="UTF-8"&gt; - กำหนด encoding ของหน้าเว็บ</li>
+                <li> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; - ทำให้เว็บ Responsive</li>
+                <li>&lt;title&gt;Document&lt;/title&gt; - กำหนดชื่อหน้าเว็บ</li>
+            </ul>
+            <li><b>&lt;body&gt;</b> - เนื้อหาที่แสดงในหน้าเว็บ</li>
+        </ul>
+    </section>
+
+    <section id="Semantic_Structure_Tag">
+        <h1>Semantic Structure Tag</h1>
+        <p>Semantic Structure Tag คือแท็กที่มีความหมายเฉพาะเจาะจงในการจัดโครงสร้างของเนื้อหาในหน้าเว็บ ซึ่งช่วยให้เครื่องมือค้นหาและผู้ใช้เข้าใจเนื้อหาได้ดีขึ้น</p>
+        <ul>
+            <li><b>&lt;header&gt;</b> - ส่วนหัวของหน้าเว็บหรือส่วนของเนื้อหา</li>
+            <li><b>&lt;nav&gt;</b> - ส่วนที่ใช้สำหรับการนำทาง</li>
+            <li><b>&lt;main&gt;</b> - เนื้อหาหลักของหน้าเว็บ</li>
+            <li><b>&lt;section&gt;</b> - ส่วนที่ใช้สำหรับแบ่งเนื้อหาเป็นส่วนๆ</li>
+            <li><b>&lt;article&gt;</b> - เนื้อหาที่สามารถแยกออกมาเป็นหน่วยเดียวได้ เช่น บทความ</li>
+            <li><b>&lt;aside&gt;</b> - เนื้อหาที่เกี่ยวข้องแต่ไม่ใช่ส่วนหลัก เช่น แถบด้านข้าง คล้ายป้ายโฆษณาตามเว็บ</li>
+            <li><b>&lt;footer&gt;</b> - ส่วนท้ายของหน้าเว็บหรือส่วนของเนื้อหา</li>
+        </ul>
+    </section>
+
+    <section id="Text_Tag">
+        <h1>Text Tag</h1>
+        <p>Text Tag คือแท็กที่ใช้สำหรับจัดรูปแบบข้อความในหน้าเว็บ</p>
+        <ul>
+            <li><b>&lt;h1&gt; ถึง &lt;h6&gt;</b> - แท็กหัวเรื่องที่มีระดับความสำคัญต่างกัน</li>
+            <li><b>&lt;p&gt;</b> - แท็กย่อหน้า</li>
+            <li><b>&lt;strong&gt;,&Lt;b&gt;</b> - แท็กเน้นข้อความให้เด่นชัด (ตัวหนา)</li>
+            <li><b>&lt;em&gt;</b> - แท็กเน้นข้อความให้เด่นชัด (ตัวเอียง)</li>
+            <li><b>&lt;br&gt;</b> - แท็กขึ้นบรรทัดใหม่</li>
+            <li><b>&lt;hr&gt;</b> - แท็กเส้นแบ่งเนื้อหา</li>
+        </ul>
+    </section>
+
+    <section id="List_Tag">
+        <h1>List Tag</h1>
+        <p>List Tag คือแท็กที่ใช้สำหรับสร้างรายการในหน้าเว็บ</p>
+        <ul>
+            <li><b>&lt;ul&gt;</b> - แท็กลิสต์ที่ไม่มีลำดับ (unordered list)</li>
+            <li><b>&lt;ol&gt;</b> - แท็กลิสต์ที่มีลำดับ (ordered list)</li>
+            <li><b>&lt;li&gt;</b> - แท็กสำหรับรายการในลิสต์</li>
+        </ul>
+    </section>
+
+    <section id="Link_Tag">
+        <h1>Link Tag</h1>
+        <p>Link Tag คือแท็กที่ใช้สำหรับสร้างลิงก์ในหน้าเว็บ</p>
+        <ul>
+            <li><b>&lt;a&gt;</b> - แท็กสำหรับสร้างลิงก์</li>
+            <li><b>href</b> - แอตทริบิวต์ที่ใช้กำหนด URL ของลิงก์</li>
+            <li><b>target</b> - แอตทริบิวต์ที่ใช้กำหนดวิธีการเปิดลิงก์ เช่น _blank เปิดในแท็บใหม่</li>
+        </ul>
+    </section>
+
+    <section id="Media_Tag">
+        <h1>Media Tag</h1>
+        <p>Media Tag คือแท็กที่ใช้สำหรับแทรกสื่อในหน้าเว็บ เช่น รูปภาพ วิดีโอ หรือเสียง</p>
+        <ul>
+            <li><b>&lt;img&gt;</b> - แท็กสำหรับแทรกรูปภาพ</li>
+            <ul>
+                <li><b>src</b> - แอตทริบิวต์ที่ใช้กำหนด URL ของรูปภาพ</li>
+                <li><b>alt</b> - แอตทริบิวต์ที่ใช้กำหนดข้อความสำรองเมื่อรูปภาพไม่สามารถโหลดได้</li>
+            </ul>
+            <pre>
+            &lt;img src="image.jpg" alt="คำอธิบายรูปภาพ"&gt;
+            </pre>
+            <li><b>&lt;video&gt;</b> - แท็กสำหรับแทรกวิดีโอ</li>
+            <pre>
+            &lt;video controls&gt;
+            &lt;source src="video.mp4" type="video/mp4"&gt;
+            &lt;source src="video.ogg" type="video/ogg"&gt;
+            </pre>
+            <li><b>&lt;audio&gt;</b> - แท็กสำหรับแทรกเสียง</li>
+            <pre>
+            &lt;audio controls&gt;
+            &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+            &lt;source src="audio.ogg" type="audio/ogg"&gt;
+            </pre>
+    </section>
+
+    <section id="Table_Tag">
+        <h1>Table Tag</h1>
+        <p>Table Tag คือแท็กที่ใช้สำหรับสร้างตารางในหน้าเว็บ</p>
+        <ul>
+            <li><b>&lt;table&gt;</b> - แท็กสำหรับสร้างตาราง</li>
+            <li><b>&lt;tr&gt;</b> - แท็กสำหรับสร้างแถวในตาราง</li>
+            <li><b>&lt;th&gt;</b> - แท็กสำหรับสร้างเซลล์หัวเรื่องในตาราง</li>
+            <li><b>&lt;td&gt;</b> - แท็กสำหรับสร้างเซลล์ข้อมูลในตาราง</li>
+        </ul>
+        <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;หัวเรื่อง 1&lt;/th&gt;
+                &lt;th&gt;หัวเรื่อง 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;ข้อมูล 1&lt;/td&gt;
+                &lt;td&gt;ข้อมูล 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+    </section>
+
+    <section id="Form_Tag">
+        <h1>Form Tag</h1>
+        <p>Form Tag คือแท็กที่ใช้สำหรับสร้างแบบฟอร์มในหน้าเว็บ เพื่อให้ผู้ใช้สามารถกรอกข้อมูลและส่งไปยังเซิร์ฟเวอร์ได้</p>
+        <ul>
+            <li><b>&lt;form&gt;</b> - แท็กสำหรับสร้างแบบฟอร์ม</li>
+            <li><b>action</b> - แอตทริบิวต์ที่ใช้กำหนด URL ที่จะส่งข้อมูลไปเมื่อแบบฟอร์มถูกส่ง</li>
+            <li><b>method</b> - แอตทริบิวต์ที่ใช้กำหนดวิธีการส่งข้อมูล เช่น GET หรือ POST</li>
+            <li><b>&lt;input&gt;</b> - แท็กสำหรับสร้างช่องกรอกข้อมูล</li>
+            <ul>
+                <li><b>type</b> - แอตทริบิวต์ที่ใช้กำหนดประเภทของช่องกรอกข้อมูล เช่น text, password, email, submit เป็นต้น</li>
+                <li><b>name</b> - แอตทริบิวต์ที่ใช้กำหนดชื่อของช่องกรอกข้อมูล เพื่อให้เซิร์ฟเวอร์สามารถรับข้อมูลได้</li>
+            </ul>
+        </ul>
+        <pre>
+        &lt;form action="/submit" method="post"&gt;
+            &lt;input type="text" name="username"&gt;
+            &lt;input type="password" name="password"&gt;
+            &lt;input type="submit" value="Submit"&gt;
+        &lt;/form&gt;
+        </pre>
+    </section>
+
+    <section id="GET_&_POST">
+        <h1>GET & POST</h1>
+        <p>GET และ POST คือวิธีการส่งข้อมูลจากหน้าเว็บไปยังเซิร์ฟเวอร์</p>
+        <ul>
+            <li><b>GET</b> - ใช้ส่งข้อมูลผ่าน URL ซึ่งข้อมูลจะปรากฏใน URL ของหน้าเว็บ</li>
+            <p>ใช้เมื่อ</p>
+            <ol>
+                <li>ต้องการส่งข้อมูลที่ไม่สำคัญหรือไม่เป็นความลับ เช่น การค้นหา</li>
+                <li>ต้องการให้ข้อมูลสามารถแชร์ได้ผ่าน URL</li>
+                <li>ต้องการให้ข้อมูลถูกเก็บในประวัติการเข้าชมของเบราว์เซอร์</li>
+            </ol>
+            <li><b>POST</b> - ใช้ส่งข้อมูลผ่าน body ของ HTTP request ซึ่งข้อมูลจะไม่ปรากฏใน URL</li>
+            <p>ใช้เมื่อ</p>
+            <ol>
+                <li>ต้องการส่งข้อมูลที่สำคัญหรือเป็นความลับ เช่น รหัสผ่าน</li>
+                <li>ต้องการส่งข้อมูลที่มีขนาดใหญ่ เช่น ไฟล์</li>
+                <li>ไม่ต้องการให้ข้อมูลถูกเก็บในประวัติการเข้าชมของเบราว์เซอร์</li>
+            </ol>
+        </ul>
+    </section>
+    
+    <section id="Attribute">
+        <h1>Attribute</h1>
+        <p>Attribute คือแอตทริบิวต์ที่ใช้เพื่อระบุคุณสมบัติของแท็ก HTML</p>
+        <ul>
+            <li><b>class</b> - ใช้กำหนดชื่อคลาสของแท็ก เพื่อใช้กับ CSS หรือ JavaScript</li>
+            <li><b>id</b> - ใช้กำหนด ID ของแท็ก เพื่อใช้กับ CSS หรือ JavaScript</li>
+            <li><b>style</b> - ใช้กำหนดสไตล์ของแท็กโดยตรง</li>
+            <li><b>alt</b> - ใช้กำหนดข้อความแสดงแทนภาพหากภาพไม่สามารถแสดงได้</li>
+            <li><b>href</b> - ใช้กำหนด URL ของลิงก์</li>
+            <li><b>src</b> - ใช้กำหนด URL ของสื่อ เช่น รูปภาพ วิดีโอ หรือเสียง</li>
+            <li><b>type</b> - ใช้กำหนดประเภทของสื่อ เช่น image/jpeg, video/mp4, audio/mpeg</li>
+            <li><b>action</b> - ใช้กำหนด URL ที่จะส่งข้อมูลไปเมื่อแบบฟอร์มถูกส่ง</li>
+            <li><b>method</b> - ใช้กำหนดวิธีการส่งข้อมูล เช่น GET หรือ POST</li>
+        </ul>
+    </section>
+<a href="CSS.html">ถัดไป</a>
+</body>
+</html>

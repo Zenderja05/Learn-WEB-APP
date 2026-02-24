@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS learn</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <h1>CSS</h1>
+    </header>
+
+    <section id="connect_CSS">
+        <h2>การเชื่อม CSS</h2>
+        <p>การเชื่อม CSS มี 3 วิธีหลักๆ คือ</p>
+        <ul>
+            <li><b>Inline CSS</b> - การเขียน CSS ลงไปในแท็ก HTML โดยตรง</li>
+            <pre>
+            &lt;h1 style="color: red;"&gt;Hello World&lt;/h1&gt;
+            </pre>
+            <li><b>Internal CSS</b> - การเขียน CSS ภายในแท็ก &lt;style&gt;</li>
+            <pre>
+            &lt;/head&gt;
+                &lt;style&gt;
+                    h1 {
+                        color: red;
+                    }
+                &lt;/style&gt;
+            &lt;body&gt;
+            </pre>
+            <li><b>External CSS</b> - การเขียน CSS ในไฟล์แยกต่างหาก และเชื่อมโยงเข้ามาใน HTML</li>
+            <pre>
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            </pre>
+    </section>
+
+    <section id="CSS_selector">
+        <h2>Selector</h2>
+        <p>Selector คือส่วนที่ใช้เลือกองค์ประกอบใน HTML เพื่อกำหนดสไตล์ให้กับมัน</p>
+        <ul>
+            <li><b>Element Selector</b> - เลือกแท็ก HTML โดยตรง เช่น h1, p</li>
+            <pre>
+            h1 {
+                color: red;
+            }
+            </pre>
+            <li><b>Class Selector</b> - เลือกองค์ประกอบที่มี class ที่กำหนด</li>
+            <pre>
+            .my-class {
+                color: blue;
+            }
+            </pre>
+            <li><b>ID Selector</b> - เลือกองค์ประกอบที่มี id ที่กำหนด</li>
+            <pre>
+            #my-id {
+                color: green;
+            }
+            </pre>
+            <li><b>Universal Selector</b> - เลือกทุกองค์ประกอบใน HTML</li>
+            <pre>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            </pre>
+            <li><b>Attribute Selector</b> - เลือกองค์ประกอบที่มีแอตทริบิวต์ที่กำหนด</li>
+            <pre>
+            a[href="https://www.example.com"] {
+                color: purple;
+            }
+            </pre>
+            <li><b>Group Selector</b> - เลือกหลายองค์ประกอบในครั้งเดียว</li>
+            <pre>
+            h1, h2, h3 {
+                color: blue;
+            }
+            </pre>
+            <li><b>Descendant Selector</b> - เลือกองค์ประกอบที่อยู่ภายในองค์ประกอบอื่น</li>
+            <pre>
+            div p {
+                color: red;
+            }
+            </pre>
+            <li><b>Child Selector</b> - เลือกองค์ประกอบที่เป็นลูกโดยตรงขององค์ประกอบอื่น</li>
+            <pre>
+            div &gt; p {
+                color: green;
+            }
+            </pre>
+            <li><b>Adjacent Sibling Selector</b> - เลือกองค์ประกณ์ที่เป็นพี่น้องติดกันขององค์ประกอบอื่น</li>
+            <pre>
+            h1 + p {
+                color: blue;
+            }
+            </pre>
+            <li><b>General Sibling Selector</b> - เลือกองค์ประกณ์ที่เป็นพี่น้องขององค์ประกอบอื่น</li>
+            <pre>
+            h1 ~ p {
+                color: orange;
+            }
+            </pre>
+        </ul>
+    </section>
+
+    <section id="Box_Model">
+        <h2>Box Model</h2>
+        <p>Box Model คือโมเดลที่ใช้ในการอธิบายการจัดวางและขนาดขององค์ประกอบใน HTML</p>
+        <ul>
+            <li><b class="content">Content</b> - ส่วนที่แสดงเนื้อหาขององค์ประกอบ</li>
+            <li><b class="padding">Padding</b> - พื้นที่ว่างระหว่างเนื้อหาและขอบขององค์ประกอบ</li>
+            <li><b class="border">Border</b> - ขอบขององค์ประกอบ</li>
+            <ol>
+                <p>border จะมีการจัดเส้นขอบตามนี้</p>
+                <li><b>solid</b> - เส้นขอบที่มีลักษณะเป็นเส้นตรง</li>
+                <li><b>dashed</b> - เส้นขอบที่มีลักษณะเป็นเส้นประ</li>
+                <li><b>dotted</b> - เส้นขอบที่มีลักษณะเป็นจุด</li>
+                <li><b>double</b> - เส้นขอบที่มีลักษณะเป็นเส้นคู่</li>
+                <li><b>groove</b> - เส้นขอบที่มีลักษณะเป็นรูปโขด</li>
+            </ol>
+            <li><b class="margin">Margin</b> - พื้นที่ว่างระหว่างองค์ประกอบกับองค์ประกอบอื่นๆ</li>
+        </ul>
+        <div class="Box">
+            <p>text</p>
+        </div>
+    </section>
+
+    <section id="value">
+        <h2>หน่วยใน CSS</h2>
+        <p>ค่าของ CSS คือค่าที่ใช้กำหนดลักษณะขององค์ประกอบใน HTML</p>
+        <ul>
+            <li><b>px</b> - พิกเซล เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบในรูปแบบของพิกเซล</li>
+            <li><b>em</b> - เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากขนาดของฟอนต์ในองค์ประกอบนั้น</li>
+            <li><b>rem</b> - เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากขนาดของฟอนต์ใน root element (html)</li>
+            <li><b>%</b> - เปอร์เซ็นต์ เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากขนาดขององค์ประกอบแม่</li>
+            <li><b>vw</b> - Viewport Width เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากความกว้างของ viewport</li>
+            <li><b>vh</b> - Viewport Height เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากความสูงของ viewport</li>
+            <li><b>vmin</b> - เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากค่าที่น้อยที่สุดระหว่าง vw และ vh</li>
+            <li><b>vmax</b> - เป็นหน่วยที่ใช้วัดขนาดขององค์ประกอบโดยอิงจากค่าที่มากที่สุดระหว่าง vw และ vh</li>
+        </ul>
+    </section>
+
+    <section id="display">
+        <h2>Display Property</h2>
+        <p>Display Property คือค่าที่ใช้กำหนดวิธีการแสดงองค์ประกอบใน HTML</p>
+        <ul>
+            <li><b>block</b> - องค์ประกอบจะแสดงเป็นบล็อก (แสดงในบรรทัดใหม่) เหมาะสำหรับ เลย์เอาท์หัวข้อ</li>
+            <li><b>inline</b> - องค์ประกอบจะแสดงเป็นอินไลน์ (แสดงในบรรทัดเดียวกัน) เหมาะสำหรับการจัดวางองค์ประกอบที่ต้องการให้แสดงในบรรทัดเดียวกัน</li>
+            <li><b>inline-block</b> - องค์ประกอบจะแสดงเป็นอินไลน์บล็อก (แสดงในบรรทัดเดียวกันแต่สามารถกำหนดขนาดได้) เหมาะสำหรับ ปุ่ม</li>
+            <li><b>flex</b> - องค์ประกอบจะแสดงเป็น flex container เหมาะสำหรับการจัดวางองค์ประกอบในแนวตั้งหรือแนวนอน</li>
+            <li><b>grid</b> - องค์ประกอบจะแสดงเป็น grid container เหมาะสำหรับการจัดวางองค์ประกอบในตาราง</li>
+            <li><b>none</b> - องค์ประกอบจะไม่แสดง</li>
+        </ul>
+    </section>
+
+    <section id="Flex">
+        <h2>Flexbox</h2>
+        <p>Flexbox คือระบบการจัดวางองค์ประกอบในแนวตั้งหรือแนวนอนที่มีความยืดหยุ่นสูง</p>
+        <ul>
+            <li><b>flex-direction</b> - กำหนดทิศทางของ flex items</li>
+            <ol>
+                <li><b>row</b> - จัดวาง flex items ตามแนวนอนจากซ้ายไปขวา</li>
+                <li><b>column</b> - จัดวาง flex items ตามแนวตั้งจากบนลงล่าง</li>
+                <li><b>row-reverse</b> - จัดวาง flex items ตามแนวนอนจากขวาไปซ้าย</li>
+                <li><b>column-reverse</b> - จัดวาง flex items ตามแนวตั้งจากล่างขึ้นบน</li>
+            </ol>
+            <li><b>justify-content</b> - กำหนดการจัดวาง flex items ในแนวนอน</li>
+            <ol>
+                <li><b>flex-start</b> - จัดวาง flex items ที่ขอบซ้ายของ container</li>
+                <li><b>flex-end</b> - จัดวาง flex items ที่ขอบขวาของ container</li>
+                <li><b>center</b> - จัดวาง flex items ตรงกลางของ container</li>
+                <li><b>space-between</b> - จัดวาง flex items ให้มีช่องว่างเท่ากันระหว่างกัน</li>
+                <li><b>space-around</b> - จัดวาง flex items ให้มีช่องว่างเท่ากันรอบๆ กัน</li>
+            </ol>
+            <li><b>align-items</b> - กำหนดการจัดวาง flex items ในแนวตั้ง </li>
+            <ol>
+                <li><b>flex-start</b> - จัดวาง flex items ที่ขอบบนของ container</li>
+                <li><b>flex-end</b> - จัดวาง flex items ที่ขอบล่างของ container</li>
+                <li><b>center</b> - จัดวาง flex items ตรงกลางของ container</li>
+                <li><b>baseline</b> - จัดวาง flex items ตามบรรทัดพื้นฐานของ container</li>
+                <li><b>stretch</b> - ขยาย flex items เพื่อเต็มพื้นที่ของ container</li>
+            </ol>
+            <li><b>flex-wrap</b> - กำหนดว่าควรให้ flex items ห่อหรือไม่ </li>
+            <ol>
+                <li><b>nowrap</b> - ไม่ให้ flex items ห่อ</li>
+                <li><b>wrap</b> - ให้ flex items ห่อลงบรรทัดใหม่</li>
+                <li><b>wrap-reverse</b> - ให้ flex items ห่อขึ้นบรรทัดใหม่</li>
+            </ol>
+            <li><b>align-content</b> - กำหนดการจัดวาง flex lines เมื่อมีหลายบรรทัด</li>
+            <ol>
+                <li><b>flex-start</b> - จัดวาง flex lines ที่ขอบบนของ container</li>
+                <li><b>flex-end</b> - จัดวาง flex lines ที่ขอบล่างของ container</li>
+                <li><b>center</b> - จัดวาง flex lines ตรงกลางของ container</li>
+                <li><b>space-between</b> - จัดวาง flex lines ให้มีช่องว่างเท่ากันระหว่างกัน</li>
+                <li><b>space-around</b> - จัดวาง flex lines ให้มีช่องว่างเท่ากันรอบๆ กัน</li>
+            </ol>
+        </ul>
+    </section>
+
+    <section id="grid">
+        <h2>Grid Layout</h2>
+        <p>Grid Layout คือระบบการจัดวางองค์ประกอบในรูปแบบตารางที่มีความยืดหยุ่นสูง</p>
+        <ul>
+            <li><b>grid-template-columns</b> - กำหนดจำนวนและขนาดของคอลัมน์ใน grid</li>
+            <pre>
+            .container {
+                display: grid;
+                grid-template-columns: 100px 200px 1fr;
+            }
+            </pre>
+            <li><b>grid-template-rows</b> - กำหนดจำนวนและขนาดของแถวใน grid</li>
+            <pre>
+            .container {
+                display: grid;
+                grid-template-rows: 100px 200px 1fr;
+            }
+            </pre>
+            <li><b>grid-gap</b> - กำหนดช่องว่างระหว่างคอลัมน์และแถวใน grid</li>
+            <pre>
+            .container {
+                display: grid;
+                grid-gap: 10px;
+            }
+            </pre>
+            <li><b>grid-template-areas</b> - กำหนดพื้นที่ของ grid โดยใช้ชื่อพื้นที่</li>
+            <pre>
+            .container {
+                display: grid;
+                grid-template-areas:
+                    "header header header"
+                    "sidebar content content"
+                    "footer footer footer";
+            }
+            </pre>
+        </ul>
+    </section>
+
+    <section id="reponsive">
+        <h2>Responsive Design</h2>
+        <p>Responsive Design คือการออกแบบเว็บไซต์ให้สามารถแสดงผลได้ดีบนอุปกรณ์ที่มีขนาดหน้าจอแตกต่างกัน</p>
+        <ul>
+            <li><b>Media Queries</b> - ใช้ในการกำหนดสไตล์ที่แตกต่างกันสำหรับอุปกรณ์ที่มีขนาดหน้าจอแตกต่างกัน</li>
+            <pre>
+            @media (max-width: 600px) {
+                .container {
+                    display: block;
+                }
+            }
+            </pre>
+            <li><b>Flexible Layouts</b> - ใช้การจัดวางที่ยืดหยุ่นเพื่อให้เว็บไซต์สามารถปรับตัวได้ตามขนาดหน้าจอ</li>
+            <pre>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            </pre>
+            <li><b>Responsive Images</b> - ใช้ภาพที่สามารถปรับขนาดได้ตามขนาดหน้าจอ</li>
+            <pre>
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            </pre>
+        </ul>
+    </section>
+
+    <a href="JAVASCRIPT.html">ถัดไป</a><a href="HTML.html">กลับไปหน้า HTML</a>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT learn</title>
+</head>
+<body>
+    <header>
+        <h1>JAVASCRIPT</h1>
+    </header>
+
+    <section id="variable">
+        <h2>ตัวแปรใน JAVASCRIPT</h2>
+        <p>ตัวแปรใน JavaScript คือพื้นที่ที่ใช้เก็บข้อมูลหรือค่าต่างๆ ที่สามารถเปลี่ยนแปลงได้ในระหว่างการทำงานของโปรแกรม</p>
+        <ul>
+            <li><b>var</b> - ตัวแปรที่มีขอบเขตการใช้งานในฟังก์ชันหรือสคริปต์ทั้งหมด</li>
+<b>
+<pre>
+var name = "John";
+</pre>
+</b>
+            <li><b>let</b> - ตัวแปรที่มีขอบเขตการใช้งานในบล็อกที่ถูกประกาศ</li>
+<b>
+<pre>
+let name = "John";
+</pre>
+</b>
+            <li><b>const</b> - ตัวแปรที่ไม่สามารถเปลี่ยนแปลงค่าได้หลังจากที่ถูกประกาศ</li>
+<b>
+<pre>
+const name = "John";
+</pre>
+</b>
+        </ul>
+    </section>
+
+    <section id="data_type">
+        <h2>ประเภทข้อมูลใน JAVASCRIPT</h2>
+        <p>JavaScript มีประเภทข้อมูลหลักๆ ดังนี้</p>
+        <ul>
+            <li><b>String</b> - ข้อความที่ใช้เก็บข้อมูลในรูปแบบของตัวอักษร</li>
+            <li><b>Number</b> - ตัวเลขที่ใช้เก็บข้อมูลในรูปแบบของตัวเลข</li>
+            <li><b>Boolean</b> - ค่าที่มีค่าเป็น true หรือ false</li>
+            <li><b>Undefined</b> - ค่าที่ยังไม่ได้กำหนดค่าให้กับตัวแปร</li>
+            <li><b>null</b> - ค่าที่มีค่าเป็น null (ไม่มีค่า)</li>
+        </ul>
+    </section>
+
+    <section id="comparison">
+        <h2>การเปรียบเทียบใน JAVASCRIPT</h2>
+        <p>การเปรียบเทียบใน JavaScript ใช้ในการตรวจสอบความสัมพันธ์ระหว่างค่าต่างๆ</p>
+        <ul>
+            <li><b>==</b> - เปรียบเทียบค่าโดยไม่สนใจชนิดข้อมูล (loose equality)</li>
+            <li><b>===</b> - เปรียบเทียบค่าและชนิดข้อมูล (strict equality)</li>
+            <li><b>!=</b> - เปรียบเทียบค่าโดยไม่สนใจชนิดข้อมูล (loose inequality)</li>
+            <li><b>!==</b> - เปรียบเทียบค่าและชนิดข้อมูล (strict inequality)</li>
+            <li><b>&gt;</b> - เปรียบเทียบว่าค่าซ้ายมากกว่าค่าขวาหรือไม่</li>
+            <li><b>&lt;</b> - เปรียบเทียบว่าค่าซ้ายน้อยกว่าค่าขวาหรือไม่</li>
+            <li><b>&gt;=</b> - เปรียบเทียบว่าค่าซ้ายมากกว่าหรือเท่ากับค่าขวาหรือไม่</li>
+            <li><b>&lt;=</b> - เปรียบเทียบว่าค่าซ้ายน้อยกว่าหรือเท่ากับค่าขวาหรือไม่</li>
+        </ul>
+    </section>
+
+    <section id="conbition">
+        <h2>เงื่อนไขใน JAVASCRIPT</h2>
+        <p>เงื่อนไขใน JavaScript ใช้ในการตัดสินใจว่าจะทำอะไรต่อไปตามค่าของตัวแปรหรือผลลัพธ์ของการเปรียบเทียบ</p>
+        <ul>
+            <li><b>if</b> - ใช้ในการตรวจสอบเงื่อนไขและทำงานเมื่อเงื่อนไขเป็นจริง</li>
+            <li><b>else</b> - ใช้ในการทำงานเมื่อเงื่อนไขใน if เป็นเท็จ</li>
+            <li><b>else if</b> - ใช้ในการตรวจสอบเงื่อนไขเพิ่มเติมเมื่อเงื่อนไขใน if เป็นเท็จ</li>
+        </ul>
+<b>
+<pre>
+if (age >= 18) {
+    console.log("You are an adult.");
+} 
+else if (age >= 13) {
+    console.log("You are a teenager.");
+} 
+else {
+    console.log("You are a child.");
+}
+</pre>
+</b>
+            
+    </section>
+
+    <section id="loop">
+        <h2>ลูปใน JAVASCRIPT</h2>
+        <p>ลูปใน JavaScript ใช้ในการทำซ้ำคำสั่งหรือบล็อกของโค้ดตามจำนวนครั้งที่กำหนดหรือจนกว่าเงื่อนไขจะเป็นเท็จ</p>
+        <ul>
+            <li><b>for</b> - ใช้ในการทำซ้ำคำสั่งตามจำนวนครั้งที่กำหนด</li>
+<b>
+<pre>
+for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}
+</pre>
+</b>
+            <li><b>while</b> - ใช้ในการทำซ้ำคำสั่งจนกว่าเงื่อนไขจะเป็นเท็จ</li>
+<b>
+<pre>
+let i = 0;
+while (i &lt; 5) {
+    console.log(i);
+    i++;
+}
+</pre>
+</b>
+            <li><b>do...while</b> - ใช้ในการทำซ้ำคำสั่งอย่างน้อยหนึ่งครั้งและตรวจสอบเงื่อนไขหลังจากนั้น</li>
+<b>
+<pre>
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i &lt; 5);
+</pre>
+</b>
+        </ul>
+    </section>
+
+    <section id="function">
+        <h2>ฟังก์ชันใน JAVASCRIPT</h2>
+        <p>ฟังก์ชันใน JavaScript คือชุดของคำสั่งที่ถูกกำหนดให้ทำงานเมื่อถูกเรียกใช้</p>
+        <ul>
+            <li><b>Function Declaration</b> - การประกาศฟังก์ชันโดยใช้คำสั่ง function</li>
+<b>
+<pre>
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+</pre>
+</b>
+            <li><b>Function Expression</b> - การประกาศฟังก์ชันโดยการกำหนดให้ตัวแปรเป็นฟังก์ชัน</li>
+<b>
+<pre>
+const greet = function(name) {
+    return "Hello, " + name + "!";
+};
+</pre>
+</b>
+            <li><b>Arrow Function</b> - การประกาศฟังก์ชันโดยใช้เครื่องหมายลูกศร (=>)</li>
+<b>
+<pre>
+const greet = (name) =&gt; {
+    return "Hello, " + name + "!";
+};
+</pre>
+</b>
+        </ul>
+    </section>
+
+    <section id="array_&_object">
+        <h2>อาเรย์และออบเจกต์ใน JAVASCRIPT</h2>
+<p>อาเรย์ (Array) คือโครงสร้างข้อมูลที่ใช้เก็บค่าหลายค่าในลำดับเดียวกัน</p>
+<b>
+<pre>
+const fruits = ["Apple", "Banana", "Cherry"];
+</pre>
+</b>
+        <p>ออบเจกต์ (Object) คือโครงสร้างข้อมูลที่ใช้เก็บค่าหลายค่าในรูปแบบของ key-value pairs</p>
+<b>
+<pre>
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+</pre>
+</b>
+    </section>
+
+    <section id="DOM">
+        <h2>DOM (Document Object Model)</h2>
+        <p>DOM คือวิธีการเข้าถึงและจัดการกับเนื้อหาของหน้าเว็บ HTML ผ่าน JavaScript</p>
+        <h3>การเลือก Element</h3>
+        <ul>
+            <li><b>getElementById</b> - ใช้ในการเลือกองค์ประกอบโดยใช้ ID</li>
+<b>
+<pre>
+const element = document.getElementById("myElement");
+</pre>
+</b>
+            <li><b>getElementsByClassName</b> - ใช้ในการเลือกองค์ประกอบโดยใช้ class name</li>
+<b>
+<pre>
+const elements = document.getElementsByClassName("myClass");
+</pre>
+</b>
+            <li><b>querySelector</b> - ใช้ในการเลือกองค์ประกอบโดยใช้ CSS selector</li>
+<b>
+<pre>
+const element = document.querySelector(".myClass");
+</pre>
+</b>
+            <li><b>querySelectorAll</b> - ใช้ในการเลือกองค์ประกอบทั้งหมดที่ตรงกับ CSS selector</li>
+<b>
+<pre>
+const elements = document.querySelectorAll(".myClass");
+</pre>
+</b>
+        </ul>
+        <h3>การแก้ไขเนื้อหา</h3>
+        <ul>
+            <li><b>textContent</b> - ใช้ในการแก้ไขข้อความภายในองค์ประกอบ</li>
+<b>
+<pre>
+element.textContent = "New Text";
+</pre>
+</b>
+            <li><b>innerHTML</b> - ใช้ในการแก้ไขเนื้อหาภายในองค์ประกอบ รวมถึง HTML tags</li>
+<b>
+<pre>
+element.innerHTML = "&lt;strong&gt;Bold Text&lt;/strong&gt;";
+</pre>
+</b>
+        </ul>
+        <h3>การแก้ไข attribute</h3>
+        <ul>
+            <li><b>setAttribute</b> - ใช้ในการตั้งค่า attribute ขององค์ประกอบ</li>
+<b>
+<pre>
+element.setAttribute("class", "newClass");
+</pre>
+</b>
+            <li><b>getA ttribute</b> - ใช้ในการดึงค่า attribute ขององค์ประกอบ</li>
+<b>
+<pre>
+const className = element.getAttribute("class");
+</pre>
+</b>
+            <li><b>removeAttribute</b> - ใช้ในการลบ attribute ขององค์ประกอบ</li>
+<b>
+<pre>
+element.removeAttribute("class");
+</pre>
+</b>
+        </ul>
+        <h3>การจัดการ Class</h3>
+        <ul>
+            <li><b>classList.add</b> - ใช้ในการเพิ่ม class ให้กับองค์ประกอบ</li>
+<b>
+<pre>
+element.classList.add("newClass");
+</pre>
+</b>
+            <li><b>classList.remove</b> - ใช้ในการลบ class จากองค์ประกอบ</li>
+<b>
+<pre>
+element.classList.remove("oldClass");
+</pre>
+</b>
+            <li><b>classList.toggle</b> - ใช้ในการสลับการมีอยู่ของ class ในองค์ประกอบ</li>
+<b>
+<pre>
+element.classList.toggle("active");
+</pre>
+</b>
+            <li><b>classList.contains</b> - ใช้ในการตรวจสอบว่าองค์ประกอบมี class นั้นอยู่หรือไม่</li>
+<b>
+<pre>
+const hasClass = element.classList.contains("myClass");
+</pre>
+</b>
+        </ul>
+        <h3>การแก้ไข Style</h3>
+        <ul>
+            <li><b>style.property</b> - ใช้ในการแก้ไขสไตล์ขององค์ประกอบโดยตรง</li>
+<b>
+<pre>
+element.style.color = "red";
+</pre>
+</b>
+        </ul>
+        <h3>การสร้าง Element ใหม่</h3>
+        <ul>
+            <li><b>createElement</b> - ใช้ในการสร้าง Element ใหม่</li>
+<b>
+<pre>
+const newElement = document.createElement("div");
+</pre>
+</b>
+            <li><b>appendChild</b> - ใช้ในการเพิ่ม Element ใหม่เข้าไปใน Element ที่มีอยู่</li>
+<b>
+<pre>
+parentElement.appendChild(newElement);
+</pre>
+</b>
+            <li><b>removeChild</b> - ใช้ในการลบ Element ออกจาก Element ที่มีอยู่</li>
+<b>
+<pre>
+parentElement.removeChild(childElement);
+</pre>
+</b>
+        </ul>
+    </section>
+
+    <section id="event_handling">
+        <h2>Event Handling</h2>
+        <p>Event Handling คือการจัดการกับเหตุการณ์ต่างๆ ที่เกิดขึ้นในหน้าเว็บ เช่น การคลิก การเลื่อนเมาส์ หรือการกดแป้นพิมพ์</p>
+        <ul>
+            <li><b>addEventListener</b> - ใช้ในการเพิ่ม event listener ให้กับองค์ประกอบ</li>
+<b>
+<pre>
+element.addEventListener("click", function() {
+    console.log("Element clicked!");
+});
+</pre>
+D</b>
+            <li><b>removeEventListener</b> - ใช้ในการลบ event listener จากองค์ประกอบ</li>
+<b>
+<pre>
+element.removeEventListener("click", handleClick);
+</pre>
+</b>
+            <li><b>Event Object</b> - ใช้ในการเข้าถึงข้อมูลเกี่ยวกับเหตุการณ์ที่เกิดขึ้น</li>
+<b>
+<pre>
+element.addEventListener("click", function(event) {
+    console.log("Mouse X: " + event.clientX);
+    console.log("Mouse Y: " + event.clientY);
+});
+</pre>
+</b>
+            <li><b>stopPropagation</b> - ใช้ในการหยุดการส่งต่อ event ไปยังองค์ประกอบอื่น</li>
+<b>
+<pre>
+element.addEventListener("click", function(event) {
+    event.stopPropagation();
+    console.log("Event stopped!");
+});
+</pre>
+</b>
+            <li><b>preventDefault</b> - ใช้ในการป้องกันพฤติกรรมเริ่มต้นของ event เช่น การลิงก์ไปยังหน้าใหม่</li>
+<b>
+<pre>
+element.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("Default behavior prevented!");
+});
+</pre>
+</b>
+        </ul>
+    </section>
+
+    <section id="API">
+        <h2>การเรียก API</h2>
+        <p>การเรียก API คือการส่งคำขอไปยังเซิร์ฟเวอร์เพื่อรับข้อมูลหรือส่งข้อมูลไปยังเซิร์ฟเวอร์</p>
+        <ul>
+            <li><b>พื้นฐานการใช้ fetch()</b></li>
+<b>
+<pre>
+fetch(url, option)
+</pre>
+</b>
+                <ol>
+                    <li><b>url</b> - ระบุ URL ของ API ที่ต้องการเรียก</li>
+                    <li><b>option</b> - ระบุตัวเลือก เช่น method, headers, body สำหรับคำขอ</li>
+                </ol>
+            <li><b>GET Request</b></li>
+<b>
+<pre>
+fetch(url, option)
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+        console.log(data);
+    })
+    .catch(error =&gt; {
+        console.error('Error:', error);
+    });
+</pre>
+</b>
+                <p>อธิบายขั้นตอน</p>
+                <ol>
+                    <li>fetch() ส่ง HTTP request</li>
+                    <li>ได้ response กลับมา (ยังไม่ใช่ JSON)</li>
+                    <li>ต้องใช้ response.json() เพื่อแปลงเป็น JavaScript Object</li>
+                    <li>ได้ data</li>
+                    <li>.catch() ดัก error</li>
+                </ol>
+            <li>async/await</li>
+            <p>คือ วิธีการจัดการกับ asynchronous operations ด้วยการใช้ async และ await ซึ่งทำให้โค้ดดูเหมือน synchronous</p>
+<b>
+<pre>
+async function getPost() {
+    try {
+        const response = await fetch(url, option);
+            
+            if (!response.ok) {
+                throw new Error('HTTP error! status: ' + response.status);
+            }
+        
+            const data = await response.json();
+            console.log(data);
+            } catch (error) {
+            console.error('Error:', error);
+        }
+}
+
+getPost();
+            </pre>
+            </b>
+            <li><b>POST Request</b></li>
+<b>
+<pre>
+async function createPost() {
+    const response = await fetch(url, option, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            title: 'Hello',
+            body: 'This is my post',
+            userId: 1
+        })
+    });
+    
+        const data = await response.json();
+        console.log(data);
+}
+
+createPost();
+</pre>
+</b>
+            <li><b>PUT/ PATCH / DELETE</b></li>
+                <ol>
+                    <li>PUT</li>
+<b>
+<pre>
+fetch(url, option, {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        id: 1,
+        title: 'Updated',
+        body: 'New content',
+        userId: 1
+    })
+    });
+</pre>
+</b>
+                    <li>PATCH</li>
+<b>
+<pre>
+fetch(url, option, {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        title: 'Partially Updated'
+    })
+});
+</pre>
+</b>
+                    <li>DELETE</li>
+<b>
+<pre>
+fetch(url, option, {
+    method: 'DELETE'
+});
+</pre>
+</b>
+                </ol>
+        </ul>
+    </section>
+    <a href="CSS.html">กลับไปหน้า CSS</a>
+</body>
+</html>

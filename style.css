@@ -1,0 +1,26 @@
+.Box{
+    width: 80px;
+    height: 15px;
+    background-color: rgb(142, 252, 108);
+    border: 5px solid rgb(253, 202, 125);
+    outline: 5px solid rgb(216, 140, 27);
+    text-align: center;
+    padding-bottom: 35px;
+    margin-left: 150px;
+}
+
+.content {
+    color: royalblue;
+}
+
+.padding {
+    color: rgb(142, 252, 108);
+}
+
+.border {
+    color: rgb(253, 202, 125);
+}
+
+.margin {
+    color: rgb(216, 140, 27);
+}
